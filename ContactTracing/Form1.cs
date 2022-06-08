@@ -33,11 +33,20 @@ namespace ContactTracing
 
             //Address
             string StreetNum = txtStNo.Text;
+
             string StreetName = txtSTName.Text;
+
             string CityProv = txtCityProv.Text;
 
             //Phone and Email
             string PhoneNum = txtPhoneN.Text;
+            PhoneNum = PhoneNum.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("8", "").Replace("h", "").Replace("i", "");
+            PhoneNum = PhoneNum.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            PhoneNum = PhoneNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+            PhoneNum = PhoneNum.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            PhoneNum = PhoneNum.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            PhoneNum = PhoneNum.Replace("{", "").Replace("}", "").Replace("'", "");
+
             string Email = txtEmail.Text;
 
             //date
@@ -47,7 +56,9 @@ namespace ContactTracing
             string Hours = txtHours.Text;
             string Minute = txtMin.Text;
             string Meridian = txtAMPM.Text;
-            
+
+            MessageBox.Show(PhoneNum);
+
             while(correct != 12)
             {
                 //Input check for First Name
