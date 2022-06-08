@@ -49,6 +49,14 @@
             this.txtCityProv = new System.Windows.Forms.TextBox();
             this.txtPhoneN = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.dtP1 = new System.Windows.Forms.DateTimePicker();
+            this.txtHours = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMin = new System.Windows.Forms.TextBox();
+            this.txtAMPM = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -290,12 +298,104 @@
             this.txtEmail.Size = new System.Drawing.Size(291, 40);
             this.txtEmail.TabIndex = 19;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(590, 594);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTime.ForeColor = System.Drawing.Color.Brown;
+            this.lblTime.Location = new System.Drawing.Point(32, 660);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(83, 23);
+            this.lblTime.TabIndex = 22;
+            this.lblTime.Text = "Time-in:";
+            // 
+            // dtP1
+            // 
+            this.dtP1.Location = new System.Drawing.Point(35, 686);
+            this.dtP1.Name = "dtP1";
+            this.dtP1.Size = new System.Drawing.Size(223, 23);
+            this.dtP1.TabIndex = 23;
+            // 
+            // txtHours
+            // 
+            this.txtHours.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHours.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtHours.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtHours.Location = new System.Drawing.Point(35, 715);
+            this.txtHours.Name = "txtHours";
+            this.txtHours.PlaceholderText = "09";
+            this.txtHours.Size = new System.Drawing.Size(45, 40);
+            this.txtHours.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(80, 715);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 35);
+            this.label1.TabIndex = 25;
+            this.label1.Text = ":";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtMin
+            // 
+            this.txtMin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMin.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMin.Location = new System.Drawing.Point(97, 715);
+            this.txtMin.Name = "txtMin";
+            this.txtMin.PlaceholderText = "41";
+            this.txtMin.Size = new System.Drawing.Size(45, 40);
+            this.txtMin.TabIndex = 26;
+            // 
+            // txtAMPM
+            // 
+            this.txtAMPM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAMPM.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAMPM.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAMPM.Location = new System.Drawing.Point(148, 715);
+            this.txtAMPM.Name = "txtAMPM";
+            this.txtAMPM.PlaceholderText = "AM";
+            this.txtAMPM.Size = new System.Drawing.Size(45, 40);
+            this.txtAMPM.TabIndex = 27;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkCyan;
+            this.button2.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(399, 680);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 70);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Submit";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(592, 780);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtAMPM);
+            this.Controls.Add(this.txtMin);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtHours);
+            this.Controls.Add(this.dtP1);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtPhoneN);
             this.Controls.Add(this.txtCityProv);
@@ -350,5 +450,13 @@
         private TextBox txtCityProv;
         private TextBox txtPhoneN;
         private TextBox txtEmail;
+        private Button button1;
+        private Label lblTime;
+        private DateTimePicker dtP1;
+        private TextBox txtHours;
+        private Label label1;
+        private TextBox txtMin;
+        private TextBox txtAMPM;
+        private Button button2;
     }
 }
