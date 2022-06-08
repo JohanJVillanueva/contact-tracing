@@ -272,15 +272,19 @@ namespace ContactTracing
 
             }
 
-            //MessageBox.Show(Fname);
+            
+            
 
 
             if (correct == 11) 
-            { 
+            {
+                MessageBox.Show("This information will be saved: " + Fname + " " + MI + ". " + Lname + ", " + StreetNum + "," + StreetName + ", " + CityProv + ", " + PhoneNum + ", " + Email + ", " + theDate + ", " + Hours + ":" + Minute + " " + Meridian);
+
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
-                //file.WriteLine("Hello");
                 file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + "," + Minute + "," + Meridian);
                 file.Close();
+
+                MessageBox.Show("Information Submitted on ContactTrace.txt");
             }
         }
 
