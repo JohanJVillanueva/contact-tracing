@@ -19,6 +19,8 @@ namespace ContactTracing
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            //Error Correction
+            byte correct = 0;
             //Name
             string Fname = txtFName.Text;
             string MI = txtMI.Text;
@@ -40,13 +42,21 @@ namespace ContactTracing
             string Hours = txtHours.Text;
             string Minute = txtMin.Text;
             string Meridian = txtAMPM.Text;
+            
+            while(correct < 9)
+            {
 
+            }
+            if (Fname.Length == 0)
+                MessageBox.Show("Missing Info on First Name!");
+            else if (Fname.Length > 1)
+                char.ToUpper(Fname[0]);
 
-
+            MessageBox.Show(Fname);
 
 
             StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
-            //file.WriteLine("Testing");
+            file.WriteLine("Testing1");
             file.Close();
         }
 
