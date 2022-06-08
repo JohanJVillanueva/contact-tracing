@@ -60,7 +60,7 @@ namespace ContactTracing
             StreetNum = StreetNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
 
             string StreetName = txtSTName.Text;
-
+            StreetName = StreetName.Replace(",", "");
             string CityProv = txtCityProv.Text;
 
             //Phone and Email
