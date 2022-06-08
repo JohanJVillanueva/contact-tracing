@@ -110,7 +110,7 @@ namespace ContactTracing
             //Check later if PM or AM
 
 
-            while(correct != 12)
+            while(correct != 11)
             {
                 /////////////////
                 //  NAME INFO  //
@@ -197,16 +197,89 @@ namespace ContactTracing
                     correct++;
                 }
 
+                ////////////////////////
+                //  PHONE/EMAIL INFO  //
+                ///////////////////////
 
+
+                //Input check for First Name
+                if (PhoneNum.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Phone Num! Submit again once fixed.");
+                    break;
+                    //Makes the first letter upper case
+                }
+                else if (PhoneNum.Length > 1)
+                {
+                    correct++;
+                }
+
+
+
+                //Input check for Middle Initial
+                if (Email.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on E-mail! Submit again once fixed.");
+                    break;
+                }
+                else if (Email.Length > 1)
+                {
+                    correct++;
+                }
+
+
+                ////////////////////
+                //  TIME IN INFO  //
+                ///////////////////
+
+
+                //Input check for First Name
+                if (Hours.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Hours! Submit again once fixed.");
+                    break;
+                    //Makes the first letter upper case
+                }
+                else if (Hours.Length > 1)
+                {
+                    correct++;
+                }
+
+
+
+                //Input check for Middle Initial
+                if (Minute.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Minute! Submit again once fixed.");
+                    break;
+                }
+                else if (Minute.Length > 1)
+                {
+                    correct++;
+                }
+
+
+                //Input check for Last Name Initial
+                if (Meridian.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Meridian! Submit again once fixed.");
+                    break;
+                }
+                else if (Meridian.Length > 1)
+                {
+                    correct++;
+                }
 
             }
 
             //MessageBox.Show(Fname);
 
 
-            if (correct == 12) { 
+            if (correct == 11) 
+            { 
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
-                file.WriteLine("Testing1");
+                //file.WriteLine("Hello");
+                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + "," + Minute + "," + Meridian);
                 file.Close();
             }
         }
