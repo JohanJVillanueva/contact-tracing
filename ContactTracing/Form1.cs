@@ -55,9 +55,9 @@ namespace ContactTracing
             //Address
             string StreetNum = txtStNo.Text;
             //Alphabet
-            StreetNum = StreetNum.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("8", "").Replace("h", "").Replace("i", "");
-            StreetNum = StreetNum.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
-            StreetNum = StreetNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "");
+            StreetNum = StreetNum.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            StreetNum = StreetNum.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            StreetNum = StreetNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
 
             string StreetName = txtSTName.Text;
 
@@ -66,10 +66,10 @@ namespace ContactTracing
             //Phone and Email
             string PhoneNum = txtPhoneN.Text;
             //Alphabet
-            PhoneNum = PhoneNum.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("8", "").Replace("h", "").Replace("i", "");
-            PhoneNum = PhoneNum.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
-            PhoneNum = PhoneNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "");
-            
+            PhoneNum = PhoneNum.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            PhoneNum = PhoneNum.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            PhoneNum = PhoneNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
             //Symbols
             PhoneNum = PhoneNum.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
             PhoneNum = PhoneNum.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
@@ -83,9 +83,9 @@ namespace ContactTracing
             //Time
             string Hours = txtHours.Text;
             //Alphabet
-            Hours = Hours.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("8", "").Replace("h", "").Replace("i", "");
-            Hours = Hours.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
-            Hours = Hours.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "");
+            Hours = Hours.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Hours = Hours.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Hours = Hours.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
 
             //Symbols
             Hours = Hours.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
@@ -94,9 +94,9 @@ namespace ContactTracing
 
 
             string Minute = txtMin.Text;
-            Minute = Minute.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("8", "").Replace("h", "").Replace("i", "");
-            Minute = Minute.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
-            Minute = Minute.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "");
+            Minute = Minute.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Minute = Minute.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Minute = Minute.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
 
             //Symbols
             Minute = Minute.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
@@ -106,6 +106,19 @@ namespace ContactTracing
 
 
             string Meridian = txtAMPM.Text;
+            //Alphabet
+            Meridian = Meridian.Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Meridian = Meridian.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Meridian = Meridian.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z","");
+
+            //Symbols
+            Meridian = Meridian.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Meridian = Meridian.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "");
+
+            //Numbers
+            Meridian = Meridian.Replace("1", "").Replace("2", "").Replace("3", "").Replace("4", "").Replace("5", "").Replace("6", "").Replace("7", "").Replace("8", "").Replace("9", "").Replace("0", "");
+
+
             Meridian = Meridian.ToUpper();
             //Check later if PM or AM
 
@@ -265,7 +278,8 @@ namespace ContactTracing
                     MessageBox.Show("Missing Info on Meridian! Submit again once fixed.");
                     break;
                 }
-                else if (Meridian.Length > 1)
+
+                else if (Minute.Length > 1)
                 {
                     correct++;
                 }
