@@ -56,7 +56,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMin = new System.Windows.Forms.TextBox();
             this.txtAMPM = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -370,17 +370,18 @@
             this.txtAMPM.Size = new System.Drawing.Size(45, 40);
             this.txtAMPM.TabIndex = 27;
             // 
-            // button2
+            // btnSubmit
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
-            this.button2.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(399, 680);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 70);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Submit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSubmit.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnSubmit.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(399, 680);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(154, 70);
+            this.btnSubmit.TabIndex = 28;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // Form1
             // 
@@ -388,7 +389,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(592, 780);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtAMPM);
             this.Controls.Add(this.txtMin);
             this.Controls.Add(this.label1);
@@ -457,6 +458,6 @@
         private Label label1;
         private TextBox txtMin;
         private TextBox txtAMPM;
-        private Button button2;
+        private Button btnSubmit;
     }
 }

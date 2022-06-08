@@ -16,5 +16,18 @@ namespace ContactTracing
         {
 
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            
+            
+            
+            
+            
+            StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            //file.WriteLine("Testing");
+            file.Close();
+        }
+
     }
 }
