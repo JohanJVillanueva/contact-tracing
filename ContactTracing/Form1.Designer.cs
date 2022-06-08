@@ -44,6 +44,11 @@
             this.txtFName = new System.Windows.Forms.TextBox();
             this.txtMI = new System.Windows.Forms.TextBox();
             this.txtLName = new System.Windows.Forms.TextBox();
+            this.txtStNo = new System.Windows.Forms.TextBox();
+            this.txtSTName = new System.Windows.Forms.TextBox();
+            this.txtCityProv = new System.Windows.Forms.TextBox();
+            this.txtPhoneN = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,11 +160,11 @@
             this.lblStreet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblStreet.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblStreet.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblStreet.Location = new System.Drawing.Point(127, 324);
+            this.lblStreet.Location = new System.Drawing.Point(158, 324);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(122, 25);
+            this.lblStreet.Size = new System.Drawing.Size(176, 25);
             this.lblStreet.TabIndex = 8;
-            this.lblStreet.Text = "Street Name";
+            this.lblStreet.Text = "Street/Town Name";
             // 
             // lblProvince
             // 
@@ -209,6 +214,7 @@
             this.txtFName.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtFName.Location = new System.Drawing.Point(40, 198);
             this.txtFName.Name = "txtFName";
+            this.txtFName.PlaceholderText = "Juan";
             this.txtFName.Size = new System.Drawing.Size(211, 40);
             this.txtFName.TabIndex = 12;
             this.txtFName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -216,9 +222,11 @@
             // txtMI
             // 
             this.txtMI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMI.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMI.Location = new System.Drawing.Point(257, 198);
             this.txtMI.Name = "txtMI";
+            this.txtMI.PlaceholderText = "S.";
             this.txtMI.Size = new System.Drawing.Size(62, 40);
             this.txtMI.TabIndex = 13;
             // 
@@ -228,8 +236,59 @@
             this.txtLName.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLName.Location = new System.Drawing.Point(325, 198);
             this.txtLName.Name = "txtLName";
+            this.txtLName.PlaceholderText = "Dela Cruz";
             this.txtLName.Size = new System.Drawing.Size(228, 40);
             this.txtLName.TabIndex = 14;
+            // 
+            // txtStNo
+            // 
+            this.txtStNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStNo.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtStNo.Location = new System.Drawing.Point(40, 352);
+            this.txtStNo.Name = "txtStNo";
+            this.txtStNo.PlaceholderText = "123";
+            this.txtStNo.Size = new System.Drawing.Size(112, 40);
+            this.txtStNo.TabIndex = 15;
+            // 
+            // txtSTName
+            // 
+            this.txtSTName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSTName.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSTName.Location = new System.Drawing.Point(158, 352);
+            this.txtSTName.Name = "txtSTName";
+            this.txtSTName.PlaceholderText = "Sampaguita St., Dalahican";
+            this.txtSTName.Size = new System.Drawing.Size(395, 40);
+            this.txtSTName.TabIndex = 16;
+            // 
+            // txtCityProv
+            // 
+            this.txtCityProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCityProv.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCityProv.Location = new System.Drawing.Point(40, 428);
+            this.txtCityProv.Name = "txtCityProv";
+            this.txtCityProv.PlaceholderText = "Cavite City, Cavite";
+            this.txtCityProv.Size = new System.Drawing.Size(426, 40);
+            this.txtCityProv.TabIndex = 17;
+            // 
+            // txtPhoneN
+            // 
+            this.txtPhoneN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhoneN.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPhoneN.Location = new System.Drawing.Point(40, 583);
+            this.txtPhoneN.Name = "txtPhoneN";
+            this.txtPhoneN.PlaceholderText = "092123456789";
+            this.txtPhoneN.Size = new System.Drawing.Size(218, 40);
+            this.txtPhoneN.TabIndex = 18;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEmail.Location = new System.Drawing.Point(262, 583);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "example@email.com";
+            this.txtEmail.Size = new System.Drawing.Size(291, 40);
+            this.txtEmail.TabIndex = 19;
             // 
             // Form1
             // 
@@ -237,6 +296,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(592, 780);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPhoneN);
+            this.Controls.Add(this.txtCityProv);
+            this.Controls.Add(this.txtSTName);
+            this.Controls.Add(this.txtStNo);
             this.Controls.Add(this.txtLName);
             this.Controls.Add(this.txtMI);
             this.Controls.Add(this.txtFName);
@@ -281,5 +345,10 @@
         private TextBox txtFName;
         private TextBox txtMI;
         private TextBox txtLName;
+        private TextBox txtStNo;
+        private TextBox txtSTName;
+        private TextBox txtCityProv;
+        private TextBox txtPhoneN;
+        private TextBox txtEmail;
     }
 }
