@@ -266,7 +266,12 @@ namespace ContactTracing
                     MessageBox.Show("Missing Info on Minute! Submit again once fixed.");
                     break;
                 }
-                else if (Minute.Length > 1)
+                else if (Minute.Length > 2)
+                {
+                    MessageBox.Show("Wrong Info on Meridian! Submit again once fixed.");
+                    break;
+                }
+                else if (Minute.Length == 2)
                 {
                     correct++;
                 }
@@ -279,7 +284,13 @@ namespace ContactTracing
                     break;
                 }
 
-                else if (Minute.Length > 1)
+                else if (Meridian.Length > 2)
+                {
+                    MessageBox.Show("Wrong Info on Meridian! Submit again once fixed.");
+                    break;
+                }
+
+                else if (Meridian.Length == 2)
                 {
                     correct++;
                 }
