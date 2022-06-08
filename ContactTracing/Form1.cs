@@ -82,13 +82,41 @@ namespace ContactTracing
 
             //Time
             string Hours = txtHours.Text;
-            string Minute = txtMin.Text;
-            string Meridian = txtAMPM.Text;
+            //Alphabet
+            Hours = Hours.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("8", "").Replace("h", "").Replace("i", "");
+            Hours = Hours.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Hours = Hours.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "");
 
-            MessageBox.Show(PhoneNum);
+            //Symbols
+            Hours = Hours.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Hours = Hours.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Hours = Hours.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+
+            string Minute = txtMin.Text;
+            Minute = Minute.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("8", "").Replace("h", "").Replace("i", "");
+            Minute = Minute.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Minute = Minute.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "");
+
+            //Symbols
+            Minute = Minute.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Minute = Minute.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Minute = Minute.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+
+
+            string Meridian = txtAMPM.Text;
+            Meridian = Meridian.ToUpper();
+            //Check later if PM or AM
+
 
             while(correct != 12)
             {
+                /////////////////
+                //  NAME INFO  //
+                /////////////////
+
+
                 //Input check for First Name
                 if (Fname.Length == 0)
                 {
@@ -101,6 +129,8 @@ namespace ContactTracing
                     correct++;
                 }
 
+
+
                 //Input check for Middle Initial
                 if (MI.Length == 0) { 
                     MessageBox.Show("Missing Info on Middle Initial! Submit again once fixed.");
@@ -110,6 +140,64 @@ namespace ContactTracing
                 {
                     correct++;
                 }
+
+
+                //Input check for Last Name Initial
+                if (Lname.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Last Name! Submit again once fixed.");
+                    break;
+                }
+                else if (Lname.Length > 1)
+                {
+                    correct++;
+                }
+
+
+
+                ////////////////////
+                //  ADDRESS INFO  //
+                ///////////////////
+
+
+                //Input check for First Name
+                if (StreetNum.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Street Number! Submit again once fixed.");
+                    break;
+                    //Makes the first letter upper case
+                }
+                else if (StreetNum.Length > 1)
+                {
+                    correct++;
+                }
+
+
+
+                //Input check for Middle Initial
+                if (StreetName.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Street Name! Submit again once fixed.");
+                    break;
+                }
+                else if (StreetName.Length > 1)
+                {
+                    correct++;
+                }
+
+
+                //Input check for Last Name Initial
+                if (CityProv.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on City / Province! Submit again once fixed.");
+                    break;
+                }
+                else if (CityProv.Length > 1)
+                {
+                    correct++;
+                }
+
+
 
             }
 
