@@ -8,3 +8,4 @@ Johan,J,Villanueva,897,ieruwoirusdjklff,kldfjsdklfjsdlfjk,128903109283,kljfldjkd
 Johan,J.,Villanueva,962,DASD,SASDASD,1231313,DASDAD,6/10/2022,07:04 AM,35.3,Male
 Johan,J.,Villanueva,962,Don P. Bautista St.,Cavite CiTY,09051968827,sdafjaskldfj,6/10/2022,7:12 AM,35.3,Male,Vaxxed and Boosted
 Johan,J.,Villanueva,962,Don P.,Cavite City,1231,sdfjasklfjd,6/10/2022,07:17 AM,36,Male,No Vaccine,12
+Johan,J.,Villanueva,962,Don P. Bautista St.,Cavite City,09051968827,sdakjasldkjalsdjk,6/10/2022,07:34 AM,35,Male,Vaxxed and Boosted,19,No symptoms

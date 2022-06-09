@@ -71,6 +71,9 @@
             this.lblVaxxed = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
+            this.clbox = new System.Windows.Forms.CheckedListBox();
+            this.lblSymptoms = new System.Windows.Forms.Label();
+            this.lblSymptoms2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -391,10 +394,10 @@
             this.btnSubmit.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSubmit.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(399, 831);
+            this.btnSubmit.Location = new System.Drawing.Point(399, 866);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(154, 70);
-            this.btnSubmit.TabIndex = 34;
+            this.btnSubmit.TabIndex = 36;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -484,7 +487,7 @@
             this.groupBox2.Controls.Add(this.rbOneVax);
             this.groupBox2.Controls.Add(this.rbNoVax);
             this.groupBox2.Controls.Add(this.lblVaxxed);
-            this.groupBox2.Location = new System.Drawing.Point(35, 770);
+            this.groupBox2.Location = new System.Drawing.Point(399, 756);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(154, 90);
             this.groupBox2.TabIndex = 33;
@@ -496,7 +499,7 @@
             this.rbVaB.Location = new System.Drawing.Point(6, 65);
             this.rbVaB.Name = "rbVaB";
             this.rbVaB.Size = new System.Drawing.Size(131, 19);
-            this.rbVaB.TabIndex = 33;
+            this.rbVaB.TabIndex = 34;
             this.rbVaB.Text = "Vaxxed and Boosted";
             this.rbVaB.UseVisualStyleBackColor = true;
             // 
@@ -506,7 +509,7 @@
             this.rbOneVax.Location = new System.Drawing.Point(6, 46);
             this.rbOneVax.Name = "rbOneVax";
             this.rbOneVax.Size = new System.Drawing.Size(62, 19);
-            this.rbOneVax.TabIndex = 32;
+            this.rbOneVax.TabIndex = 33;
             this.rbOneVax.Text = "Vaxxed";
             this.rbOneVax.UseVisualStyleBackColor = true;
             // 
@@ -517,7 +520,7 @@
             this.rbNoVax.Location = new System.Drawing.Point(6, 27);
             this.rbNoVax.Name = "rbNoVax";
             this.rbNoVax.Size = new System.Drawing.Size(84, 19);
-            this.rbNoVax.TabIndex = 31;
+            this.rbNoVax.TabIndex = 32;
             this.rbNoVax.TabStop = true;
             this.rbNoVax.Text = "No Vaccine";
             this.rbNoVax.UseVisualStyleBackColor = true;
@@ -527,7 +530,7 @@
             this.lblVaxxed.AutoSize = true;
             this.lblVaxxed.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblVaxxed.ForeColor = System.Drawing.Color.Brown;
-            this.lblVaxxed.Location = new System.Drawing.Point(0, 1);
+            this.lblVaxxed.Location = new System.Drawing.Point(12, 1);
             this.lblVaxxed.Name = "lblVaxxed";
             this.lblVaxxed.Size = new System.Drawing.Size(121, 23);
             this.lblVaxxed.TabIndex = 30;
@@ -538,29 +541,69 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAge.ForeColor = System.Drawing.Color.Brown;
-            this.lblAge.Location = new System.Drawing.Point(195, 770);
+            this.lblAge.Location = new System.Drawing.Point(262, 732);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(83, 23);
+            this.lblAge.Size = new System.Drawing.Size(49, 23);
             this.lblAge.TabIndex = 35;
-            this.lblAge.Text = "Time-in:";
+            this.lblAge.Text = "Age:";
             // 
             // txtAge
             // 
             this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAge.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAge.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAge.Location = new System.Drawing.Point(200, 796);
+            this.txtAge.Location = new System.Drawing.Point(264, 758);
             this.txtAge.Name = "txtAge";
             this.txtAge.PlaceholderText = "18";
             this.txtAge.Size = new System.Drawing.Size(90, 40);
-            this.txtAge.TabIndex = 34;
+            this.txtAge.TabIndex = 31;
+            // 
+            // clbox
+            // 
+            this.clbox.FormattingEnabled = true;
+            this.clbox.Items.AddRange(new object[] {
+            "Cough",
+            "Fever",
+            "Runny Nose",
+            "Loss of smell or taste",
+            "Other Symptoms"});
+            this.clbox.Location = new System.Drawing.Point(53, 842);
+            this.clbox.Name = "clbox";
+            this.clbox.Size = new System.Drawing.Size(266, 94);
+            this.clbox.TabIndex = 35;
+            this.clbox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // lblSymptoms
+            // 
+            this.lblSymptoms.AutoSize = true;
+            this.lblSymptoms.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSymptoms.ForeColor = System.Drawing.Color.Brown;
+            this.lblSymptoms.Location = new System.Drawing.Point(53, 799);
+            this.lblSymptoms.Name = "lblSymptoms";
+            this.lblSymptoms.Size = new System.Drawing.Size(268, 23);
+            this.lblSymptoms.TabIndex = 37;
+            this.lblSymptoms.Text = "Do you have any symptoms?";
+            // 
+            // lblSymptoms2
+            // 
+            this.lblSymptoms2.AutoSize = true;
+            this.lblSymptoms2.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSymptoms2.ForeColor = System.Drawing.Color.Brown;
+            this.lblSymptoms2.Location = new System.Drawing.Point(68, 819);
+            this.lblSymptoms2.Name = "lblSymptoms2";
+            this.lblSymptoms2.Size = new System.Drawing.Size(229, 23);
+            this.lblSymptoms2.TabIndex = 38;
+            this.lblSymptoms2.Text = "Leave unchecked if none";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(592, 926);
+            this.ClientSize = new System.Drawing.Size(592, 952);
+            this.Controls.Add(this.lblSymptoms2);
+            this.Controls.Add(this.lblSymptoms);
+            this.Controls.Add(this.clbox);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.groupBox2);
@@ -656,5 +699,8 @@
         private Label lblVaxxed;
         private Label lblAge;
         private TextBox txtAge;
+        private CheckedListBox clbox;
+        private Label lblSymptoms;
+        private Label lblSymptoms2;
     }
 }
