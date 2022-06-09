@@ -69,6 +69,8 @@
             this.rbOneVax = new System.Windows.Forms.RadioButton();
             this.rbNoVax = new System.Windows.Forms.RadioButton();
             this.lblVaxxed = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtAge = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -531,12 +533,36 @@
             this.lblVaxxed.TabIndex = 30;
             this.lblVaxxed.Text = "Vaccinated?";
             // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAge.ForeColor = System.Drawing.Color.Brown;
+            this.lblAge.Location = new System.Drawing.Point(195, 770);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(83, 23);
+            this.lblAge.TabIndex = 35;
+            this.lblAge.Text = "Time-in:";
+            // 
+            // txtAge
+            // 
+            this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAge.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAge.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAge.Location = new System.Drawing.Point(200, 796);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.PlaceholderText = "18";
+            this.txtAge.Size = new System.Drawing.Size(90, 40);
+            this.txtAge.TabIndex = 34;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(592, 926);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.lblAge);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblC);
@@ -628,5 +654,7 @@
         private RadioButton rbOneVax;
         private RadioButton rbNoVax;
         private Label lblVaxxed;
+        private Label lblAge;
+        private TextBox txtAge;
     }
 }

@@ -153,9 +153,19 @@ namespace ContactTracing
                 vax = rbVaB.Text;
             }
 
+            string Age = txtAge.Text;
+            Age = Age.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Age = Age.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Age = Age.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
+            //Symbols
+            Age = Age.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Age = Age.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Age = Age.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
             //MessageBox.Show(Sex);
 
-            while (correct != 12)
+            while (correct != 13)
             {
                 /////////////////
                 //  NAME INFO  //
@@ -327,14 +337,26 @@ namespace ContactTracing
                     correct++;
                 }
 
-                //Input check for Meridian
+                //Input check for Temperature
                 if (Temperature.Length == 0)
                 {
-                    MessageBox.Show("Missing Info on Meridian! Submit again once fixed.");
+                    MessageBox.Show("Missing Info on Temperature! Submit again once fixed.");
                     break;
                 }
 
                 else if (Temperature.Length > 2)
+                {
+                    correct++;
+                }
+
+                //Input check for Age
+                if (Age.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Age! Submit again once fixed.");
+                    break;
+                }
+
+                else if (Age.Length > 2)
                 {
                     correct++;
                 }
@@ -345,12 +367,12 @@ namespace ContactTracing
             
 
 
-            if (correct == 12) 
+            if (correct == 13) 
             {
-                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax);
+                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax);
 
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
-                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + Temperature + "," + Sex + "," + vax);
+                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + Temperature + "," + Sex + "," + vax + "," + Age);
                 file.Close();
 
                 MessageBox.Show("Information Submitted on ContactTrace.txt");
