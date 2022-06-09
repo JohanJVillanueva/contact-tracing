@@ -60,7 +60,12 @@
             this.lblTemp = new System.Windows.Forms.Label();
             this.txtTemp = new System.Windows.Forms.TextBox();
             this.lblC = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSex = new System.Windows.Forms.Label();
+            this.txtMale = new System.Windows.Forms.RadioButton();
+            this.txtFemale = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pctBg
@@ -420,12 +425,58 @@
             this.lblC.Text = "C";
             this.lblC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtFemale);
+            this.groupBox1.Controls.Add(this.txtMale);
+            this.groupBox1.Controls.Add(this.txtSex);
+            this.groupBox1.Location = new System.Drawing.Point(399, 660);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(154, 90);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            // 
+            // txtSex
+            // 
+            this.txtSex.AutoSize = true;
+            this.txtSex.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSex.ForeColor = System.Drawing.Color.Brown;
+            this.txtSex.Location = new System.Drawing.Point(49, 0);
+            this.txtSex.Name = "txtSex";
+            this.txtSex.Size = new System.Drawing.Size(46, 23);
+            this.txtSex.TabIndex = 30;
+            this.txtSex.Text = "Sex:";
+            // 
+            // txtMale
+            // 
+            this.txtMale.AutoSize = true;
+            this.txtMale.Checked = true;
+            this.txtMale.Location = new System.Drawing.Point(36, 27);
+            this.txtMale.Name = "txtMale";
+            this.txtMale.Size = new System.Drawing.Size(51, 19);
+            this.txtMale.TabIndex = 31;
+            this.txtMale.TabStop = true;
+            this.txtMale.Text = "Male";
+            this.txtMale.UseVisualStyleBackColor = true;
+            this.txtMale.CheckedChanged += new System.EventHandler(this.txtMale_CheckedChanged);
+            // 
+            // txtFemale
+            // 
+            this.txtFemale.AutoSize = true;
+            this.txtFemale.Location = new System.Drawing.Point(36, 47);
+            this.txtFemale.Name = "txtFemale";
+            this.txtFemale.Size = new System.Drawing.Size(63, 19);
+            this.txtFemale.TabIndex = 32;
+            this.txtFemale.Text = "Female";
+            this.txtFemale.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(592, 926);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblC);
             this.Controls.Add(this.txtTemp);
             this.Controls.Add(this.lblTemp);
@@ -464,6 +515,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LilJohn Contact Tracing Form";
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,5 +555,9 @@
         private Label lblTemp;
         private TextBox txtTemp;
         private Label lblC;
+        private GroupBox groupBox1;
+        private RadioButton txtFemale;
+        private RadioButton txtMale;
+        private Label txtSex;
     }
 }

@@ -128,6 +128,19 @@ namespace ContactTracing
             Temperature = Temperature.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
             Temperature = Temperature.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
 
+            string Sex = "";
+
+            if (txtMale.Checked == true)
+            {
+                Sex = txtMale.Text;
+            }
+            else
+            {
+                Sex = txtFemale.Text;
+            }
+
+            //MessageBox.Show(Sex);
+
             while (correct != 12)
             {
                 /////////////////
@@ -320,10 +333,10 @@ namespace ContactTracing
 
             if (correct == 12) 
             {
-                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname+ Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature);
+                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature);
 
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
-                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + Temperature);
+                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + Temperature + "," + Sex);
                 file.Close();
 
                 MessageBox.Show("Information Submitted on ContactTrace.txt");
@@ -333,6 +346,9 @@ namespace ContactTracing
             }
         }
 
+        private void txtMale_CheckedChanged(object sender, EventArgs e)
+        {
+        }
 
     }
 }
