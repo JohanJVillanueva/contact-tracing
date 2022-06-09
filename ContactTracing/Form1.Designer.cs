@@ -57,6 +57,9 @@
             this.txtMin = new System.Windows.Forms.TextBox();
             this.txtAMPM = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblTemp = new System.Windows.Forms.Label();
+            this.txtTemp = new System.Windows.Forms.TextBox();
+            this.lblC = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,20 +378,57 @@
             this.btnSubmit.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSubmit.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(399, 680);
+            this.btnSubmit.Location = new System.Drawing.Point(399, 831);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(154, 70);
-            this.btnSubmit.TabIndex = 28;
+            this.btnSubmit.TabIndex = 29;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTemp.ForeColor = System.Drawing.Color.Brown;
+            this.lblTemp.Location = new System.Drawing.Point(262, 660);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(131, 23);
+            this.lblTemp.TabIndex = 29;
+            this.lblTemp.Text = "Temperature:";
+            // 
+            // txtTemp
+            // 
+            this.txtTemp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTemp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTemp.Font = new System.Drawing.Font("Poetsen One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTemp.Location = new System.Drawing.Point(264, 686);
+            this.txtTemp.Name = "txtTemp";
+            this.txtTemp.PlaceholderText = "36.4";
+            this.txtTemp.Size = new System.Drawing.Size(90, 40);
+            this.txtTemp.TabIndex = 28;
+            // 
+            // lblC
+            // 
+            this.lblC.AutoSize = true;
+            this.lblC.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblC.ForeColor = System.Drawing.Color.Black;
+            this.lblC.Location = new System.Drawing.Point(359, 687);
+            this.lblC.Name = "lblC";
+            this.lblC.Size = new System.Drawing.Size(33, 35);
+            this.lblC.TabIndex = 31;
+            this.lblC.Text = "C";
+            this.lblC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(592, 780);
+            this.ClientSize = new System.Drawing.Size(592, 926);
+            this.Controls.Add(this.lblC);
+            this.Controls.Add(this.txtTemp);
+            this.Controls.Add(this.lblTemp);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtAMPM);
             this.Controls.Add(this.txtMin);
@@ -459,5 +499,8 @@
         private TextBox txtMin;
         private TextBox txtAMPM;
         private Button btnSubmit;
+        private Label lblTemp;
+        private TextBox txtTemp;
+        private Label lblC;
     }
 }
