@@ -139,6 +139,20 @@ namespace ContactTracing
                 Sex = txtFemale.Text;
             }
 
+            String vax = "";
+            if (rbNoVax.Checked == true)
+            {
+                vax = rbNoVax.Text;
+            }
+            else if(rbOneVax.Checked == true)
+            {
+                vax = rbOneVax.Text;
+            }
+            else if(rbVaB.Checked == true)
+            {
+                vax = rbVaB.Text;
+            }
+
             //MessageBox.Show(Sex);
 
             while (correct != 12)
@@ -333,10 +347,10 @@ namespace ContactTracing
 
             if (correct == 12) 
             {
-                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature);
+                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax);
 
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
-                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + Temperature + "," + Sex);
+                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + Temperature + "," + Sex + "," + vax);
                 file.Close();
 
                 MessageBox.Show("Information Submitted on ContactTrace.txt");

@@ -61,11 +61,17 @@
             this.txtTemp = new System.Windows.Forms.TextBox();
             this.lblC = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSex = new System.Windows.Forms.Label();
-            this.txtMale = new System.Windows.Forms.RadioButton();
             this.txtFemale = new System.Windows.Forms.RadioButton();
+            this.txtMale = new System.Windows.Forms.RadioButton();
+            this.txtSex = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbVaB = new System.Windows.Forms.RadioButton();
+            this.rbOneVax = new System.Windows.Forms.RadioButton();
+            this.rbNoVax = new System.Windows.Forms.RadioButton();
+            this.lblVaxxed = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pctBg
@@ -386,7 +392,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(399, 831);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(154, 70);
-            this.btnSubmit.TabIndex = 29;
+            this.btnSubmit.TabIndex = 34;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -436,6 +442,29 @@
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
+            // txtFemale
+            // 
+            this.txtFemale.AutoSize = true;
+            this.txtFemale.Location = new System.Drawing.Point(36, 47);
+            this.txtFemale.Name = "txtFemale";
+            this.txtFemale.Size = new System.Drawing.Size(63, 19);
+            this.txtFemale.TabIndex = 30;
+            this.txtFemale.Text = "Female";
+            this.txtFemale.UseVisualStyleBackColor = true;
+            // 
+            // txtMale
+            // 
+            this.txtMale.AutoSize = true;
+            this.txtMale.Checked = true;
+            this.txtMale.Location = new System.Drawing.Point(36, 27);
+            this.txtMale.Name = "txtMale";
+            this.txtMale.Size = new System.Drawing.Size(51, 19);
+            this.txtMale.TabIndex = 29;
+            this.txtMale.TabStop = true;
+            this.txtMale.Text = "Male";
+            this.txtMale.UseVisualStyleBackColor = true;
+            this.txtMale.CheckedChanged += new System.EventHandler(this.txtMale_CheckedChanged);
+            // 
             // txtSex
             // 
             this.txtSex.AutoSize = true;
@@ -447,28 +476,60 @@
             this.txtSex.TabIndex = 30;
             this.txtSex.Text = "Sex:";
             // 
-            // txtMale
+            // groupBox2
             // 
-            this.txtMale.AutoSize = true;
-            this.txtMale.Checked = true;
-            this.txtMale.Location = new System.Drawing.Point(36, 27);
-            this.txtMale.Name = "txtMale";
-            this.txtMale.Size = new System.Drawing.Size(51, 19);
-            this.txtMale.TabIndex = 31;
-            this.txtMale.TabStop = true;
-            this.txtMale.Text = "Male";
-            this.txtMale.UseVisualStyleBackColor = true;
-            this.txtMale.CheckedChanged += new System.EventHandler(this.txtMale_CheckedChanged);
+            this.groupBox2.Controls.Add(this.rbVaB);
+            this.groupBox2.Controls.Add(this.rbOneVax);
+            this.groupBox2.Controls.Add(this.rbNoVax);
+            this.groupBox2.Controls.Add(this.lblVaxxed);
+            this.groupBox2.Location = new System.Drawing.Point(35, 770);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(154, 90);
+            this.groupBox2.TabIndex = 33;
+            this.groupBox2.TabStop = false;
             // 
-            // txtFemale
+            // rbVaB
             // 
-            this.txtFemale.AutoSize = true;
-            this.txtFemale.Location = new System.Drawing.Point(36, 47);
-            this.txtFemale.Name = "txtFemale";
-            this.txtFemale.Size = new System.Drawing.Size(63, 19);
-            this.txtFemale.TabIndex = 32;
-            this.txtFemale.Text = "Female";
-            this.txtFemale.UseVisualStyleBackColor = true;
+            this.rbVaB.AutoSize = true;
+            this.rbVaB.Location = new System.Drawing.Point(6, 65);
+            this.rbVaB.Name = "rbVaB";
+            this.rbVaB.Size = new System.Drawing.Size(131, 19);
+            this.rbVaB.TabIndex = 33;
+            this.rbVaB.Text = "Vaxxed and Boosted";
+            this.rbVaB.UseVisualStyleBackColor = true;
+            // 
+            // rbOneVax
+            // 
+            this.rbOneVax.AutoSize = true;
+            this.rbOneVax.Location = new System.Drawing.Point(6, 46);
+            this.rbOneVax.Name = "rbOneVax";
+            this.rbOneVax.Size = new System.Drawing.Size(62, 19);
+            this.rbOneVax.TabIndex = 32;
+            this.rbOneVax.Text = "Vaxxed";
+            this.rbOneVax.UseVisualStyleBackColor = true;
+            // 
+            // rbNoVax
+            // 
+            this.rbNoVax.AutoSize = true;
+            this.rbNoVax.Checked = true;
+            this.rbNoVax.Location = new System.Drawing.Point(6, 27);
+            this.rbNoVax.Name = "rbNoVax";
+            this.rbNoVax.Size = new System.Drawing.Size(84, 19);
+            this.rbNoVax.TabIndex = 31;
+            this.rbNoVax.TabStop = true;
+            this.rbNoVax.Text = "No Vaccine";
+            this.rbNoVax.UseVisualStyleBackColor = true;
+            // 
+            // lblVaxxed
+            // 
+            this.lblVaxxed.AutoSize = true;
+            this.lblVaxxed.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVaxxed.ForeColor = System.Drawing.Color.Brown;
+            this.lblVaxxed.Location = new System.Drawing.Point(0, 1);
+            this.lblVaxxed.Name = "lblVaxxed";
+            this.lblVaxxed.Size = new System.Drawing.Size(121, 23);
+            this.lblVaxxed.TabIndex = 30;
+            this.lblVaxxed.Text = "Vaccinated?";
             // 
             // Form1
             // 
@@ -476,6 +537,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(592, 926);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblC);
             this.Controls.Add(this.txtTemp);
@@ -517,6 +579,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,5 +623,10 @@
         private RadioButton txtFemale;
         private RadioButton txtMale;
         private Label txtSex;
+        private GroupBox groupBox2;
+        private RadioButton rbVaB;
+        private RadioButton rbOneVax;
+        private RadioButton rbNoVax;
+        private Label lblVaxxed;
     }
 }
