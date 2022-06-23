@@ -40,12 +40,20 @@ namespace ContactTracing
                 {
                     countDate++;
                     MessageBox.Show("Found" + countDate.ToString());
+                    dates.Add(datadate);
                 }
 
             }
             if (countDate == 0)
             {
-                MessageBox.Show("No names found on that date");
+                MessageBox.Show("No contact tracing information found on that date");
+            }
+            else
+            {
+                foreach (string datadate in dates)
+                {
+                    MessageBox.Show(datadate);
+                }
             }
 
         }
@@ -76,14 +84,22 @@ namespace ContactTracing
                     names.Add(dataname);
                     
                 }
+                
                    
             }
-
-            
-            foreach(string dataname in names)
+            if (counted == 0)
             {
-                MessageBox.Show(dataname);
+                MessageBox.Show("No such names in database");
             }
+            else
+            {
+                foreach (string dataname in names)
+                {
+                    MessageBox.Show(dataname);
+                }
+            }
+            
+            
 
         }
     }
