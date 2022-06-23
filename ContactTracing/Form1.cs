@@ -78,7 +78,7 @@ namespace ContactTracing
             string Email = txtEmail.Text;
 
             //date
-            //string theDate = dtP1.Value.ToShortDateString();
+            string theDate = dtP1.Value.ToShortDateString();
 
             //Time
             string Hours = txtHours.Text;
@@ -199,7 +199,7 @@ namespace ContactTracing
                     break;
                     
                 }
-                else if (Fname.Length > 1) {
+                else if (Fname.Length > 0) {
                     Fname = char.ToUpper(Fname[0]) + Fname.Substring(1);
                     correct++;
                 }
@@ -211,7 +211,7 @@ namespace ContactTracing
                     MessageBox.Show("Missing Info on Middle Initial! Submit again once fixed.");
                     break;
                 }
-                else if (MI.Length > 1)
+                else if (MI.Length > 0)
                 {
                     correct++;
                 }
@@ -223,7 +223,7 @@ namespace ContactTracing
                     MessageBox.Show("Missing Info on Last Name! Submit again once fixed.");
                     break;
                 }
-                else if (Lname.Length > 1)
+                else if (Lname.Length > 0)
                 {
                     correct++;
                 }
@@ -242,7 +242,7 @@ namespace ContactTracing
                     break;
                     
                 }
-                else if (StreetNum.Length > 1)
+                else if (StreetNum.Length > 0)
                 {
                     correct++;
                 }
@@ -255,7 +255,7 @@ namespace ContactTracing
                     MessageBox.Show("Missing Info on Street Name! Submit again once fixed.");
                     break;
                 }
-                else if (StreetName.Length > 1)
+                else if (StreetName.Length > 0)
                 {
                     correct++;
                 }
@@ -267,7 +267,7 @@ namespace ContactTracing
                     MessageBox.Show("Missing Info on City / Province! Submit again once fixed.");
                     break;
                 }
-                else if (CityProv.Length > 1)
+                else if (CityProv.Length > 0)
                 {
                     correct++;
                 }
@@ -284,7 +284,7 @@ namespace ContactTracing
                     break;
                     
                 }
-                else if (PhoneNum.Length > 1)
+                else if (PhoneNum.Length > 0)
                 {
                     correct++;
                 }
@@ -297,7 +297,7 @@ namespace ContactTracing
                     MessageBox.Show("Missing Info on E-mail! Submit again once fixed.");
                     break;
                 }
-                else if (Email.Length > 1)
+                else if (Email.Length > 0)
                 {
                     correct++;
                 }
@@ -315,7 +315,7 @@ namespace ContactTracing
                     break;
                     
                 }
-                else if (Hours.Length > 1)
+                else if (Hours.Length != 0)
                 {
                     correct++;
                 }
@@ -325,15 +325,11 @@ namespace ContactTracing
                 //Input check for Minutes
                 if (Minute.Length == 0)
                 {
-                    MessageBox.Show("Missing Info on Minute! Submit again once fixed.");
+                    MessageBox.Show("Missing Info on Hours! Submit again once fixed.");
                     break;
+
                 }
-                else if (Minute.Length > 2)
-                {
-                    MessageBox.Show("Wrong Info on Meridian! Submit again once fixed.");
-                    break;
-                }
-                else if (Minute.Length == 2)
+                else if (Minute.Length != 0)
                 {
                     correct++;
                 }
@@ -346,13 +342,7 @@ namespace ContactTracing
                     break;
                 }
 
-                else if (Meridian.Length > 2)
-                {
-                    MessageBox.Show("Wrong Info on Meridian! Submit again once fixed.");
-                    break;
-                }
-
-                else if (Meridian.Length == 2)
+                else if (Meridian.Length > 0)
                 {
                     correct++;
                 }
@@ -364,7 +354,7 @@ namespace ContactTracing
                     break;
                 }
 
-                else if (Temperature.Length > 1)
+                else if (Temperature.Length > 0)
                 {
                     correct++;
                 }
@@ -376,7 +366,7 @@ namespace ContactTracing
                     break;
                 }
 
-                else if (Age.Length > 2)
+                else if (Age.Length > 0)
                 {
                     correct++;
                 }
@@ -389,11 +379,11 @@ namespace ContactTracing
 
             if (correct == 13) 
             {
-                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: ");
+                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate +Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: ");
 
                 //StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
-                file.WriteLine("Name: " +Fname + "," + MI + "," + Lname + "," + "Address" + StreetNum + "," + StreetName + "," + CityProv + "," + "Contact:" + PhoneNum + "," + Email + "," + "Date:" + "," + Hours + ":" + Minute + " " + Meridian + "," + "Temperature: " + Temperature + "," + Sex + "," + "Vax Info" + vax + "," + Age + ",");
+                file.WriteLine("Name: " +Fname + "," + MI + "," + Lname + "," + "Address" + StreetNum + "," + StreetName + "," + CityProv + "," + "Contact:" + PhoneNum + "," + Email + "," + "Date:" + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + "Temperature: " + Temperature + "," + Sex + "," + "Vax Info" + vax + "," + Age + ",");
                 file.Close();
 
                 MessageBox.Show("Information Submitted on ContactTrace.txt");
