@@ -78,7 +78,7 @@ namespace ContactTracing
             string Email = txtEmail.Text;
 
             //date
-            string theDate = dtP1.Value.ToShortDateString();
+            //string theDate = dtP1.Value.ToShortDateString();
 
             //Time
             string Hours = txtHours.Text;
@@ -119,14 +119,14 @@ namespace ContactTracing
             Meridian = Meridian.Replace("1", "").Replace("2", "").Replace("3", "").Replace("4", "").Replace("5", "").Replace("6", "").Replace("7", "").Replace("8", "").Replace("9", "").Replace("0", "");
 
 
-            Meridian = Meridian.ToUpper();
+            //Meridian = Meridian.ToUpper();
             //Check later if PM or AM
 
             string Temperature = txtTemp.Text;
             //Alphabet
             Temperature = Temperature.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
             Temperature = Temperature.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
-            Temperature = Temperature.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+            Temperature = Temperature.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "").Replace(".", "");
 
             string Sex = "";
 
@@ -163,18 +163,18 @@ namespace ContactTracing
             Age = Age.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
             Age = Age.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
 
-            string Symptoms = "";
+            //string Symptoms = "";
 
                      
-            foreach (var item in clbox.CheckedItems)
-            {
-                Symptoms = Symptoms + "-" + item.ToString();
-            }
+            //foreach (var item in clbox.CheckedItems)
+            //{
+            //    Symptoms = Symptoms + "-" + item.ToString();
+            //}
 
-            if(Symptoms.Length == 0)
-            {
-                Symptoms = "No symptoms";
-            }
+            //if(Symptoms.Length == 0)
+            //{
+            //    Symptoms = "No symptoms";
+            //}
 
             //MessageBox.Show(Symptoms);
 
@@ -364,7 +364,7 @@ namespace ContactTracing
                     break;
                 }
 
-                else if (Temperature.Length > 2)
+                else if (Temperature.Length > 1)
                 {
                     correct++;
                 }
@@ -389,17 +389,17 @@ namespace ContactTracing
 
             if (correct == 13) 
             {
-                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: " + Symptoms);
+                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: ");
 
                 //StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
-                file.WriteLine(Fname + "," + MI + "," + Lname + "," + StreetNum + "," + StreetName + "," + CityProv + "," + PhoneNum + "," + Email + "," + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + Temperature + "," + Sex + "," + vax + "," + Age + "," + Symptoms);
+                file.WriteLine("Name: " +Fname + "," + MI + "," + Lname + "," + "Address" + StreetNum + "," + StreetName + "," + CityProv + "," + "Contact:" + PhoneNum + "," + Email + "," + "Date:" + "," + Hours + ":" + Minute + " " + Meridian + "," + "Temperature: " + Temperature + "," + Sex + "," + "Vax Info" + vax + "," + Age + ",");
                 file.Close();
 
                 MessageBox.Show("Information Submitted on ContactTrace.txt");
                 MessageBox.Show("Application will now restart for a new form to be inputted. Thank you for using! Stay safe!");
-                Application.Restart();
-                Environment.Exit(0);
+                //Application.Restart();
+                //Environment.Exit(0);
             }
         }
 

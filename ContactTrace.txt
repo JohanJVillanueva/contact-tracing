@@ -1,19 +1,9 @@
-Johan,J.,Villanueva,123,Sampaguita St. Dalahican,Cavite City Cavite,09123456789,email@gmail.com,6/9/2022,12:17 AM
-Lilibeth,J.,Villanueva,962,Don P. Bautista St.,Cavite City,09261234678,lilibeth@gmail.com,6/9/2022,12:18 AM
-John,S.,Villanueva,962,Sampaguita Don P. St.,Cavite City,0909123456,john@gmail.com,6/9/2022,12:19 AM
-Johan,J.,Villanueva,962,Don P.,Cavite City,09051968827,johanvillanueva3@gmail.com,6/9/2022,06:38 AM
-Jhian,J.,Villanueva,962,Don P. Sampaguita St.,Cavite Cityh,09051968827,email@email.com,6/9/2022,06:44 AM
-Johan,J.,Villanueva,123,342ertsdaf,dfsgagffsf dsf,1293813098,asdfkljaslk;dfj,6/10/2022,06:46 AM
-Johan,J,Villanueva,897,ieruwoirusdjklff,kldfjsdklfjsdlfjk,128903109283,kljfldjkdsfklj,6/10/2022,6:58 AM,35.3
-Johan,J.,Villanueva,962,DASD,SASDASD,1231313,DASDAD,6/10/2022,07:04 AM,35.3,Male
-Johan,J.,Villanueva,962,Don P. Bautista St.,Cavite CiTY,09051968827,sdafjaskldfj,6/10/2022,7:12 AM,35.3,Male,Vaxxed and Boosted
-Johan,J.,Villanueva,962,Don P.,Cavite City,1231,sdfjasklfjd,6/10/2022,07:17 AM,36,Male,No Vaccine,12
-Johan,J.,Villanueva,962,Don P. Bautista St.,Cavite City,09051968827,sdakjasldkjalsdjk,6/10/2022,07:34 AM,35,Male,Vaxxed and Boosted,19,No symptoms
-Johan,J.,Villanueva,123,Sampaguita St. Dalahican,Cavite City, Cavit,09051968827,johan@gmail.com,6/10/2022,7:36 AM,35.3,Male,Vaxxed and Boosted,19,No symptoms
-Johan,J.,Villanueva,123,Sampaguita St.,Cavite City,09121212122,johan@email.com,6/10/2022,7:37 AM,36.4,Male,Vaxxed and Boosted,19,No symptoms
-Johan,J.,Villanueva,962,Sampaguita St. Dalahican,Cavite City, Cavite,0905123123123,johan@gmail.com,6/10/2022,7:38 AM,35.3,Male,Vaxxed and Boosted,19,No symptoms
-John,J.,Villanueva,123,Don P. Baustista,Cavite City,090512312312,john@gmail.com,6/10/2022,7:40 AM,35.2,Male,Vaxxed and Boosted,19,-Cough-Fever-Runny Nose-Loss of smell or taste
-Lilibeth,J.,Villanueva,973,Sampaguita,Cavite Noveleta,0924674366,hello@gmail.com,6/10/2022,7:41 AM,36.3,Male,Vaxxed and Boosted,40,-Fever-Loss of smell or taste
-Johan,J.,Villanueva,962,Don P. Bautista,avite,92893208,sldkfjsdlkjf,6/12/2022,08:33 AM,12,Male,No Vaccine,15,-Runny Nose
-Fdsdf,S,sf,123,dfsfsdf,sdfsdfsdf,12312313,sdfsdfsdf,6/12/2022,8:36 AM,43,Male,No Vaccine,34,No symptoms
-Wer,E,we,231,34234sfd,werwer,23424,wewer,6/12/2022,8:36 AM,345,Male,Vaxxed and Boosted,345,No symptoms
+Name: Johan,J.,Villanueva,Address9053,452347289347234234,4ewuroiweuropqwiuerui,Contact:234234234,werwer234,Date:6/23/2022,06:41 PM,Temperature: 56,Male,Vax InfoVaxxed and Boosted,19,No symptoms
+Name: Johan,J.,Villanueva,Address123,sdlkfjasdfklj,asldkfjsldfkj,Contact:12908190238,sdlfkjsdfkljsdfkj,Date:,07:00 PM,Temperature: 46,Male,Vax InfoVaxxed and Boosted,19,
+Name: Johan,J.,Villanueva,Address123,sdlkfjasdfklj,asldkfjsldfkj,Contact:12908190238,sdlfkjsdfkljsdfkj,Date:,07:00 PM,Temperature: 46,Male,Vax InfoVaxxed,19,
+Name: Johan,J.,Villanueva,Address123,sdlkfjasdfklj,asldkfjsldfkj,Contact:12908190238,sdlfkjsdfkljsdfkj,Date:,07:00 PM,Temperature: 46,Female,Vax InfoVaxxed,19,
+Name: Johan,J.,Villanueva,Address123,sdlkfjasdfklj,asldkfjsldfkj,Contact:12908190238,sdlfkjsdfkljsdfkj,Date:,07:00 PM,Temperature: 46,Female,Vax InfoNo Vaccine,19,
+Name: Johan,J.,Villanueva,Address962,Don P.,askldjaskljd,Contact:2390123,dsfkljsdflkj,Date:,07:01 PM,Temperature: 43,Male,Vax InfoVaxxed and Boosted,19,
+Name: Johan,J.,Villanueva,Address962,Don P. Bautista St.,Dalahican,Contact:C C,12390128312,Date:,7:04 PM,Temperature: 43,Male,Vax InfoVaxxed and Boosted,19,
+Name: Johan,J.,Villanueva,Address962,Don P. Bautista St.,Dalahican,Contact:C C,12390128312,Date:,7:04 PM,Temperature: 431,Male,Vax InfoVaxxed and Boosted,19,
+Name: Johan,J.,Villanueva,Address962,Don P. Bautista St.,Dalahican,Contact:C C,12390128312,Date:,7:04 PM,Temperature: 431123123,Male,Vax InfoVaxxed and Boosted,19,
