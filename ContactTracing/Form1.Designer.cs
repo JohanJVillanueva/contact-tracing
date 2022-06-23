@@ -589,17 +589,17 @@
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(483, 130);
+            this.btnAdmin.Location = new System.Drawing.Point(440, 130);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(75, 23);
+            this.btnAdmin.Size = new System.Drawing.Size(113, 23);
             this.btnAdmin.TabIndex = 39;
-            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.Text = "Admin Submit";
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // txtPw
             // 
-            this.txtPw.Location = new System.Drawing.Point(377, 130);
+            this.txtPw.Location = new System.Drawing.Point(334, 130);
             this.txtPw.Name = "txtPw";
             this.txtPw.PasswordChar = '*';
             this.txtPw.PlaceholderText = "Password";
