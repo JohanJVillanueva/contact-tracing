@@ -24,30 +24,29 @@ namespace ContactTracing
 
         private void btnSbDate_Click(object sender, EventArgs e)
         {
-            //StreamReader reader = new StreamReader(@"C:\Users\liljo\Documents\Forms\ContactTrace.txt");
             
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+
             List<string> dates = new List<string>();
 
             //int datecount = 0;
-            //Date:6/23/2022
+            //Date:6/23/2022 9 and 10
             string InfoDate = dtP2.Value.ToShortDateString();
-            int length = InfoDate.Length;
-            MessageBox.Show(length.ToString());
+            int countDate = 0;
+            while (!reader.EndOfStream)
+            {
+                string datadate = reader.ReadLine();
+                if (datadate.Contains(InfoDate))
+                {
+                    countDate++;
+                    MessageBox.Show("Found" + countDate.ToString());
+                }
 
-            //while (!reader.EndOfStream)
-            //{
-            //    string datadate = reader.ReadLine();
-            //    if (datadate.Contains(grabName))
-            //    {
-            //        //MessageBox.Show(reader.ReadLine());
-            //        i++;
-            //        MessageBox.Show("Found: " + i.ToString());
-            //        names.Add(dataname);
-            //
-            //    }
-
-            //}
+            }
+            if (countDate == 0)
+            {
+                MessageBox.Show("No names found on that date");
+            }
 
         }
 
