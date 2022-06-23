@@ -47,12 +47,13 @@
             this.lblAnythingAtDate = new System.Windows.Forms.Label();
             this.dtP3 = new System.Windows.Forms.DateTimePicker();
             this.txtSearchAll = new System.Windows.Forms.TextBox();
+            this.lblMoreInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctBgForm2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtP2
             // 
-            this.dtP2.Location = new System.Drawing.Point(41, 182);
+            this.dtP2.Location = new System.Drawing.Point(44, 172);
             this.dtP2.Name = "dtP2";
             this.dtP2.Size = new System.Drawing.Size(200, 23);
             this.dtP2.TabIndex = 0;
@@ -185,7 +186,7 @@
             // 
             this.txtSbLName.Location = new System.Drawing.Point(310, 234);
             this.txtSbLName.Name = "txtSbLName";
-            this.txtSbLName.PlaceholderText = "Juan";
+            this.txtSbLName.PlaceholderText = "Dela Cruz";
             this.txtSbLName.Size = new System.Drawing.Size(198, 23);
             this.txtSbLName.TabIndex = 16;
             // 
@@ -218,11 +219,11 @@
             this.lblAnythingAtDate.AutoSize = true;
             this.lblAnythingAtDate.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAnythingAtDate.ForeColor = System.Drawing.Color.Brown;
-            this.lblAnythingAtDate.Location = new System.Drawing.Point(310, 359);
+            this.lblAnythingAtDate.Location = new System.Drawing.Point(327, 358);
             this.lblAnythingAtDate.Name = "lblAnythingAtDate";
-            this.lblAnythingAtDate.Size = new System.Drawing.Size(192, 46);
+            this.lblAnythingAtDate.Size = new System.Drawing.Size(157, 46);
             this.lblAnythingAtDate.TabIndex = 19;
-            this.lblAnythingAtDate.Text = "Search by Anything \r\nat Specific Date:";
+            this.lblAnythingAtDate.Text = "Search Any Info \r\nat Specific Date:";
             this.lblAnythingAtDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dtP3
@@ -240,12 +241,27 @@
             this.txtSearchAll.Size = new System.Drawing.Size(198, 23);
             this.txtSearchAll.TabIndex = 21;
             // 
+            // lblMoreInfo
+            // 
+            this.lblMoreInfo.AutoSize = true;
+            this.lblMoreInfo.Font = new System.Drawing.Font("Futura Maxi CG Bold", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMoreInfo.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblMoreInfo.Location = new System.Drawing.Point(55, 589);
+            this.lblMoreInfo.Name = "lblMoreInfo";
+            this.lblMoreInfo.Size = new System.Drawing.Size(445, 48);
+            this.lblMoreInfo.TabIndex = 22;
+            this.lblMoreInfo.Text = "Once searched and filtered, the program automatically \r\nsaves a text file contain" +
+    "ing the specific search query of the admin.\r\nThis can be found at the root direc" +
+    "tory of the program.\r\n";
+            this.lblMoreInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(570, 690);
+            this.Controls.Add(this.lblMoreInfo);
             this.Controls.Add(this.txtSearchAll);
             this.Controls.Add(this.btnSearchAll);
             this.Controls.Add(this.lblAnythingAtDate);
@@ -295,5 +311,6 @@
         private Label lblAnythingAtDate;
         private DateTimePicker dtP3;
         private TextBox txtSearchAll;
+        private Label lblMoreInfo;
     }
 }

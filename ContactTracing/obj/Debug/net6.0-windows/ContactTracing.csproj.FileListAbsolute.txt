@@ -21,3 +21,4 @@ E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-win
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.Form4.resources
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.Form5.resources
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.Form6.resources
+E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.Form7.resources
