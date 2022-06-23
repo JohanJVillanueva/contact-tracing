@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.lblInstructions = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -57,9 +58,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(1453, 450);
+            this.ClientSize = new System.Drawing.Size(1553, 450);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblInstructions);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form5";
             this.Text = "Form5";
             this.ResumeLayout(false);

@@ -43,6 +43,10 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.txtSbLName = new System.Windows.Forms.TextBox();
             this.btnSbLName = new System.Windows.Forms.Button();
+            this.btnSearchAll = new System.Windows.Forms.Button();
+            this.lblAnythingAtDate = new System.Windows.Forms.Label();
+            this.dtP3 = new System.Windows.Forms.DateTimePicker();
+            this.txtSearchAll = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBgForm2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +56,7 @@
             this.dtP2.Name = "dtP2";
             this.dtP2.Size = new System.Drawing.Size(200, 23);
             this.dtP2.TabIndex = 0;
+            this.dtP2.ValueChanged += new System.EventHandler(this.dtP2_ValueChanged);
             // 
             // lblDateOfCT
             // 
@@ -196,12 +201,55 @@
             this.btnSbLName.UseVisualStyleBackColor = true;
             this.btnSbLName.Click += new System.EventHandler(this.btnSbLName_Click);
             // 
+            // btnSearchAll
+            // 
+            this.btnSearchAll.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSearchAll.ForeColor = System.Drawing.Color.Peru;
+            this.btnSearchAll.Location = new System.Drawing.Point(344, 466);
+            this.btnSearchAll.Name = "btnSearchAll";
+            this.btnSearchAll.Size = new System.Drawing.Size(121, 44);
+            this.btnSearchAll.TabIndex = 20;
+            this.btnSearchAll.Text = "Submit";
+            this.btnSearchAll.UseVisualStyleBackColor = true;
+            this.btnSearchAll.Click += new System.EventHandler(this.btnSearchAll_Click);
+            // 
+            // lblAnythingAtDate
+            // 
+            this.lblAnythingAtDate.AutoSize = true;
+            this.lblAnythingAtDate.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAnythingAtDate.ForeColor = System.Drawing.Color.Brown;
+            this.lblAnythingAtDate.Location = new System.Drawing.Point(310, 359);
+            this.lblAnythingAtDate.Name = "lblAnythingAtDate";
+            this.lblAnythingAtDate.Size = new System.Drawing.Size(192, 46);
+            this.lblAnythingAtDate.TabIndex = 19;
+            this.lblAnythingAtDate.Text = "Search by Anything \r\nat Specific Date:";
+            this.lblAnythingAtDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dtP3
+            // 
+            this.dtP3.Location = new System.Drawing.Point(308, 411);
+            this.dtP3.Name = "dtP3";
+            this.dtP3.Size = new System.Drawing.Size(200, 23);
+            this.dtP3.TabIndex = 18;
+            // 
+            // txtSearchAll
+            // 
+            this.txtSearchAll.Location = new System.Drawing.Point(309, 437);
+            this.txtSearchAll.Name = "txtSearchAll";
+            this.txtSearchAll.PlaceholderText = "Juan / Temperature / Vaxxination";
+            this.txtSearchAll.Size = new System.Drawing.Size(198, 23);
+            this.txtSearchAll.TabIndex = 21;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(570, 690);
+            this.Controls.Add(this.txtSearchAll);
+            this.Controls.Add(this.btnSearchAll);
+            this.Controls.Add(this.lblAnythingAtDate);
+            this.Controls.Add(this.dtP3);
             this.Controls.Add(this.btnSbLName);
             this.Controls.Add(this.txtSbLName);
             this.Controls.Add(this.lblLastName);
@@ -243,5 +291,9 @@
         private Label lblLastName;
         private TextBox txtSbLName;
         private Button btnSbLName;
+        private Button btnSearchAll;
+        private Label lblAnythingAtDate;
+        private DateTimePicker dtP3;
+        private TextBox txtSearchAll;
     }
 }

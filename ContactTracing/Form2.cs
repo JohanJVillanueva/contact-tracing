@@ -174,5 +174,56 @@ namespace ContactTracing
             }
             reader.Close();
         }
+
+        private void btnSearchAll_Click(object sender, EventArgs e)
+        {                     
+
+            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            List<string> all = new List<string>();
+            
+            string Query = txtSearchAll.Text;
+            string AllInfoDate = dtP3.Value.ToShortDateString();
+            int counted = 0;
+            while (!reader.EndOfStream)
+            {
+                string Allinfo = reader.ReadLine();
+                if (Allinfo.Contains(AllInfoDate))
+                {
+                    if (Allinfo.Contains(Query))
+                    {
+                        counted++;
+                        all.Add(Allinfo);
+                    }                   
+                    
+                }
+
+            }
+            if (counted == 0)
+            {
+                MessageBox.Show("Nothing found");
+                reader.Close();
+            }
+            else
+            {
+                reader.Close();
+                StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceSpecific.txt");
+                foreach (string info in all)
+                {
+                    file.WriteLine(info);
+                }
+                MessageBox.Show("Found: " + counted.ToString() + " forms on said date");
+                MessageBox.Show("The info will be saved and can be viewed at ContactTraceDate.txt");
+                file.Close();
+                Form7 data = new Form7();
+                data.ShowDialog(); // Shows Form7
+
+
+            }
+        }
+
+        private void dtP2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
