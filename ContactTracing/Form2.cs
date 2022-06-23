@@ -25,6 +25,29 @@ namespace ContactTracing
         private void btnSbDate_Click(object sender, EventArgs e)
         {
             //StreamReader reader = new StreamReader(@"C:\Users\liljo\Documents\Forms\ContactTrace.txt");
+            
+            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            List<string> dates = new List<string>();
+
+            //int datecount = 0;
+            //Date:6/23/2022
+            string InfoDate = dtP2.Value.ToShortDateString();
+            int length = InfoDate.Length;
+            MessageBox.Show(length.ToString());
+
+            //while (!reader.EndOfStream)
+            //{
+            //    string datadate = reader.ReadLine();
+            //    if (datadate.Contains(grabName))
+            //    {
+            //        //MessageBox.Show(reader.ReadLine());
+            //        i++;
+            //        MessageBox.Show("Found: " + i.ToString());
+            //        names.Add(dataname);
+            //
+            //    }
+
+            //}
 
         }
 
@@ -41,7 +64,7 @@ namespace ContactTracing
 
 
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
-            int i = 0;
+            int counted = 0;
             string grabName = txtSbName.Text;
             while (!reader.EndOfStream)
             {
@@ -49,14 +72,15 @@ namespace ContactTracing
                 if (dataname.Contains(grabName))
                 {
                     //MessageBox.Show(reader.ReadLine());
-                    i++;
-                    MessageBox.Show("Found: " + i.ToString());
+                    counted++;
+                    MessageBox.Show("Found: " + counted.ToString());
                     names.Add(dataname);
                     
                 }
                    
             }
 
+            
             foreach(string dataname in names)
             {
                 MessageBox.Show(dataname);
