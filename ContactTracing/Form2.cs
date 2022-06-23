@@ -72,9 +72,13 @@ namespace ContactTracing
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
-            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
-            
-            MessageBox.Show(reader.ReadToEnd());
+            //StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            //MessageBox.Show(reader.ReadToEnd());
+            //reader.Close();
+            Form6 all = new Form6();
+            all.ShowDialog(); // Shows Form6
+
+
         }
 
         private void btnSbName_Click(object sender, EventArgs e)

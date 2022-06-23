@@ -216,7 +216,10 @@
             this.Controls.Add(this.lblDateOfCT);
             this.Controls.Add(this.dtP2);
             this.Controls.Add(this.pctBgForm2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lil\'John Admin";
             ((System.ComponentModel.ISupportInitialize)(this.pctBgForm2)).EndInit();
             this.ResumeLayout(false);

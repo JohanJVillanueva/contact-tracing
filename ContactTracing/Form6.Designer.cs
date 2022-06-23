@@ -1,6 +1,6 @@
 ﻿namespace ContactTracing
 {
-    partial class Form4
+    partial class Form6
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             this.lblInstructions.Location = new System.Drawing.Point(12, 9);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(1051, 23);
-            this.lblInstructions.TabIndex = 2;
+            this.lblInstructions.TabIndex = 4;
             this.lblInstructions.Text = "This form shows an overview of the information. This is also saved via text file " +
     "on the root directory of this program.\r\n";
             // 
@@ -47,21 +47,21 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Poetsen One", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblInfo.Location = new System.Drawing.Point(22, 49);
+            this.lblInfo.Location = new System.Drawing.Point(21, 41);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(0, 14);
-            this.lblInfo.TabIndex = 3;
+            this.lblInfo.TabIndex = 5;
             // 
-            // Form4
+            // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(1602, 450);
+            this.ClientSize = new System.Drawing.Size(1408, 539);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblInstructions);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Name = "Form6";
+            this.Text = "Form6";
             this.ResumeLayout(false);
             this.PerformLayout();
 
