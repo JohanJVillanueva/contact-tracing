@@ -37,6 +37,9 @@ namespace ContactTracing
 
         private void btnSbName_Click(object sender, EventArgs e)
         {
+            List<string> names = new List<string>();
+
+
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
             int i = 0;
             string grabName = txtSbName.Text;
@@ -46,10 +49,17 @@ namespace ContactTracing
                 if (dataname.Contains(grabName))
                 {
                     //MessageBox.Show(reader.ReadLine());
-                    MessageBox.Show("Yow" + i.ToString());
                     i++;
+                    MessageBox.Show("Found: " + i.ToString());
+                    names.Add(dataname);
+                    
                 }
                    
+            }
+
+            foreach(string dataname in names)
+            {
+                MessageBox.Show(dataname);
             }
 
         }
