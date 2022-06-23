@@ -36,9 +36,8 @@
             this.lblInfo.AutoSize = true;
             this.lblInfo.Location = new System.Drawing.Point(23, 27);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(38, 15);
+            this.lblInfo.Size = new System.Drawing.Size(0, 15);
             this.lblInfo.TabIndex = 0;
-            this.lblInfo.Text = "label1";
             this.lblInfo.Click += new System.EventHandler(this.lblInfo_Click);
             // 
             // Form3

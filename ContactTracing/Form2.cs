@@ -53,7 +53,7 @@ namespace ContactTracing
             else
             {
                 reader.Close();
-                StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt", true);
+                StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt");
                 foreach (string datadate in dates)
                 {
                     MessageBox.Show(datadate);
@@ -61,8 +61,8 @@ namespace ContactTracing
                 }
                 MessageBox.Show("The info will be saved and can be viewd at ContactTraceDate.txt");
                 file.Close();
-                //Form3 data = new Form3();
-                //data.ShowDialog(); // Shows Form3
+                Form3 data = new Form3();
+                data.ShowDialog(); // Shows Form3
 
 
             }

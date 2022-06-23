@@ -14,7 +14,17 @@ namespace ContactTracing
     {
         public Form3()
         {
+
+
             InitializeComponent();
+            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt");
+
+            while (!reader.EndOfStream)
+            {
+                string datadate = reader.ReadLine();
+                lblInfo.Text = lblInfo.Text + datadate + "\n";
+            }
+            
         }
 
         private void lblInfo_Click(object sender, EventArgs e)
