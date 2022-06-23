@@ -54,6 +54,9 @@ namespace ContactTracing
                 {
                     MessageBox.Show(datadate);
                 }
+
+                Form3 data = new Form3();
+                data.ShowDialog(); // Shows Form2
             }
 
         }
@@ -101,6 +104,41 @@ namespace ContactTracing
             
             
 
+        }
+
+        private void btnSbLName_Click(object sender, EventArgs e)
+        {
+            List<string> Lnames = new List<string>();
+
+
+            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            int Lcounted = 0;
+            string grabLName = txtSbLName.Text;
+            while (!reader.EndOfStream)
+            {
+                string dataLname = reader.ReadLine();
+                if (dataLname.Contains(grabLName))
+                {
+                    //MessageBox.Show(reader.ReadLine());
+                    Lcounted++;
+                    MessageBox.Show("Found: " + Lcounted.ToString());
+                    Lnames.Add(dataLname);
+
+                }
+
+
+            }
+            if (Lcounted == 0)
+            {
+                MessageBox.Show("No such names in database");
+            }
+            else
+            {
+                foreach (string dataLname in Lnames)
+                {
+                    MessageBox.Show(dataLname);
+                }
+            }
         }
     }
 }

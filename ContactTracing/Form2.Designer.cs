@@ -40,6 +40,9 @@
             this.btnSbDate = new System.Windows.Forms.Button();
             this.btnSbName = new System.Windows.Forms.Button();
             this.btnShowAll = new System.Windows.Forms.Button();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.txtSbLName = new System.Windows.Forms.TextBox();
+            this.btnSbLName = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBgForm2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,7 +93,7 @@
             this.lblNameOfCT.AutoSize = true;
             this.lblNameOfCT.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNameOfCT.ForeColor = System.Drawing.Color.Brown;
-            this.lblNameOfCT.Location = new System.Drawing.Point(310, 119);
+            this.lblNameOfCT.Location = new System.Drawing.Point(305, 105);
             this.lblNameOfCT.Name = "lblNameOfCT";
             this.lblNameOfCT.Size = new System.Drawing.Size(203, 23);
             this.lblNameOfCT.TabIndex = 6;
@@ -98,7 +101,7 @@
             // 
             // txtSbName
             // 
-            this.txtSbName.Location = new System.Drawing.Point(310, 182);
+            this.txtSbName.Location = new System.Drawing.Point(310, 131);
             this.txtSbName.Name = "txtSbName";
             this.txtSbName.PlaceholderText = "Juan";
             this.txtSbName.Size = new System.Drawing.Size(198, 23);
@@ -142,7 +145,7 @@
             // 
             this.btnSbName.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSbName.ForeColor = System.Drawing.Color.Peru;
-            this.btnSbName.Location = new System.Drawing.Point(344, 208);
+            this.btnSbName.Location = new System.Drawing.Point(344, 160);
             this.btnSbName.Name = "btnSbName";
             this.btnSbName.Size = new System.Drawing.Size(121, 44);
             this.btnSbName.TabIndex = 13;
@@ -162,12 +165,46 @@
             this.btnShowAll.UseVisualStyleBackColor = true;
             this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLastName.ForeColor = System.Drawing.Color.Brown;
+            this.lblLastName.Location = new System.Drawing.Point(305, 208);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(195, 23);
+            this.lblLastName.TabIndex = 15;
+            this.lblLastName.Text = "Search by Last Name";
+            // 
+            // txtSbLName
+            // 
+            this.txtSbLName.Location = new System.Drawing.Point(310, 234);
+            this.txtSbLName.Name = "txtSbLName";
+            this.txtSbLName.PlaceholderText = "Juan";
+            this.txtSbLName.Size = new System.Drawing.Size(198, 23);
+            this.txtSbLName.TabIndex = 16;
+            // 
+            // btnSbLName
+            // 
+            this.btnSbLName.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSbLName.ForeColor = System.Drawing.Color.Peru;
+            this.btnSbLName.Location = new System.Drawing.Point(344, 260);
+            this.btnSbLName.Name = "btnSbLName";
+            this.btnSbLName.Size = new System.Drawing.Size(121, 44);
+            this.btnSbLName.TabIndex = 17;
+            this.btnSbLName.Text = "Submit";
+            this.btnSbLName.UseVisualStyleBackColor = true;
+            this.btnSbLName.Click += new System.EventHandler(this.btnSbLName_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(570, 690);
+            this.Controls.Add(this.btnSbLName);
+            this.Controls.Add(this.txtSbLName);
+            this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.btnShowAll);
             this.Controls.Add(this.btnSbName);
             this.Controls.Add(this.btnSbDate);
@@ -200,5 +237,8 @@
         private Button btnSbDate;
         private Button btnSbName;
         private Button btnShowAll;
+        private Label lblLastName;
+        private TextBox txtSbLName;
+        private Button btnSbLName;
     }
 }
