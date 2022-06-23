@@ -1,6 +1,6 @@
 ﻿namespace ContactTracing
 {
-    partial class Form3
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -28,42 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblInfo = new System.Windows.Forms.Label();
             this.lblInstructions = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblInfo
-            // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.Font = new System.Drawing.Font("Poetsen One", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblInfo.Location = new System.Drawing.Point(23, 48);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(0, 14);
-            this.lblInfo.TabIndex = 0;
-            this.lblInfo.Click += new System.EventHandler(this.lblInfo_Click);
             // 
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
             this.lblInstructions.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblInstructions.Location = new System.Drawing.Point(17, 14);
+            this.lblInstructions.Location = new System.Drawing.Point(12, 9);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(1051, 23);
-            this.lblInstructions.TabIndex = 1;
+            this.lblInstructions.TabIndex = 2;
             this.lblInstructions.Text = "This form shows an overview of the information. This is also saved via text file " +
     "on the root directory of this program.\r\n";
-            this.lblInstructions.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form3
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Poetsen One", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblInfo.Location = new System.Drawing.Point(22, 49);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(0, 14);
+            this.lblInfo.TabIndex = 3;
+            // 
+            // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(1467, 572);
-            this.Controls.Add(this.lblInstructions);
+            this.ClientSize = new System.Drawing.Size(1490, 450);
             this.Controls.Add(this.lblInfo);
-            this.Name = "Form3";
-            this.Text = "Contact Tracing Info";
+            this.Controls.Add(this.lblInstructions);
+            this.Name = "Form4";
+            this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,7 +69,7 @@
 
         #endregion
 
-        private Label lblInfo;
         private Label lblInstructions;
+        private Label lblInfo;
     }
 }

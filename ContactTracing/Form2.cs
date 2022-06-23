@@ -40,7 +40,7 @@ namespace ContactTracing
                 if (datadate.Contains(InfoDate))
                 {
                     countDate++;
-                    MessageBox.Show("Found: " + countDate.ToString());
+                    //MessageBox.Show("Found: " + countDate.ToString());
                     dates.Add(datadate);
                 }
 
@@ -56,10 +56,10 @@ namespace ContactTracing
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt");
                 foreach (string datadate in dates)
                 {
-                    MessageBox.Show(datadate);
+                    //MessageBox.Show(datadate);
                     file.WriteLine(datadate);
                 }
-                MessageBox.Show("The info will be saved and can be viewd at ContactTraceDate.txt");
+                MessageBox.Show("The info will be saved and can be viewed at ContactTraceDate.txt");
                 file.Close();
                 Form3 data = new Form3();
                 data.ShowDialog(); // Shows Form3
@@ -94,22 +94,31 @@ namespace ContactTracing
                     MessageBox.Show("Found: " + counted.ToString());
                     names.Add(dataname);
                     
+
                 }
                 
                    
             }
             if (counted == 0)
             {
+                reader.Close();
                 MessageBox.Show("No such names in database");
             }
             else
             {
+                reader.Close();
+                StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceFirstName.txt");
                 foreach (string dataname in names)
                 {
                     MessageBox.Show(dataname);
+                    file.WriteLine(dataname);
                 }
+                MessageBox.Show("The info will be saved and can be viewed at ContactTraceFirstName.txt");
+                file.Close();
+                Form4 namedata = new Form4();
+                namedata.ShowDialog(); // Shows Form4
             }
-            reader.Close();
+            
 
 
         }
