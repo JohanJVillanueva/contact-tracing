@@ -19,10 +19,12 @@ namespace ContactTracing
 
             while (!reader.EndOfStream)
             {
-                string datadate = reader.ReadLine();
-                lblInfo.Text = lblInfo.Text + datadate + "\n";
+                string datalname = reader.ReadLine();
+                lblInfo.Text = lblInfo.Text + datalname + "\n";
             }
             reader.Close();
+
+
         }
     }
 }

@@ -157,11 +157,12 @@ namespace ContactTracing
                 foreach (string dataLname in Lnames)
                 {
                     MessageBox.Show(dataLname);
-                    
+                    file.WriteLine(dataLname);
+
                 }
                 MessageBox.Show("The info will be saved and can be viewed at ContactTraceLastName.txt");
                 file.Close();
-                Form4 lnamedata = new Form4();
+                Form5 lnamedata = new Form5();
                 lnamedata.ShowDialog(); // Shows Form3
             }
             reader.Close();
