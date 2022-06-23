@@ -138,7 +138,7 @@ namespace ContactTracing
                 {
                     //MessageBox.Show(reader.ReadLine());
                     Lcounted++;
-                    MessageBox.Show("Found: " + Lcounted.ToString());
+                    //MessageBox.Show("Found: " + Lcounted.ToString());
                     Lnames.Add(dataLname);
 
                 }
@@ -148,14 +148,21 @@ namespace ContactTracing
             if (Lcounted == 0)
             {
                 MessageBox.Show("No such names in database");
+                reader.Close();
             }
             else
             {
+                reader.Close();
+                StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceLastName.txt");
                 foreach (string dataLname in Lnames)
                 {
                     MessageBox.Show(dataLname);
                     
                 }
+                MessageBox.Show("The info will be saved and can be viewed at ContactTraceLastName.txt");
+                file.Close();
+                Form4 lnamedata = new Form4();
+                lnamedata.ShowDialog(); // Shows Form3
             }
             reader.Close();
         }

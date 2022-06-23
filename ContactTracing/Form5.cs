@@ -10,14 +10,12 @@ using System.Windows.Forms;
 
 namespace ContactTracing
 {
-    public partial class Form3 : Form
+    public partial class Form5 : Form
     {
-        public Form3()
+        public Form5()
         {
-
-
             InitializeComponent();
-            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt");
+            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceLastName.txt");
 
             while (!reader.EndOfStream)
             {
@@ -25,17 +23,6 @@ namespace ContactTracing
                 lblInfo.Text = lblInfo.Text + datadate + "\n";
             }
             reader.Close();
-            
-        }
-
-        private void lblInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

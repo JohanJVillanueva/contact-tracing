@@ -22,6 +22,7 @@ namespace ContactTracing
                 string datadate = reader.ReadLine();
                 lblInfo.Text = lblInfo.Text + datadate + "\n";
             }
+            reader.Close();
         }
     }
 }
