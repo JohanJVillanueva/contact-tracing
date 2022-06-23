@@ -59,6 +59,7 @@ namespace ContactTracing
                     //MessageBox.Show(datadate);
                     file.WriteLine(datadate);
                 }
+                MessageBox.Show("Found: " + countDate.ToString() + " forms on said date");
                 MessageBox.Show("The info will be saved and can be viewed at ContactTraceDate.txt");
                 file.Close();
                 Form3 data = new Form3();
@@ -91,7 +92,7 @@ namespace ContactTracing
                 {
                     //MessageBox.Show(reader.ReadLine());
                     counted++;
-                    MessageBox.Show("Found: " + counted.ToString());
+                    //MessageBox.Show("Found: " + counted.ToString());
                     names.Add(dataname);
                     
 
@@ -110,9 +111,10 @@ namespace ContactTracing
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceFirstName.txt");
                 foreach (string dataname in names)
                 {
-                    MessageBox.Show(dataname);
+                    //MessageBox.Show(dataname);
                     file.WriteLine(dataname);
                 }
+                MessageBox.Show("Found: " + counted.ToString() + " instances of: " + grabName);
                 MessageBox.Show("The info will be saved and can be viewed at ContactTraceFirstName.txt");
                 file.Close();
                 Form4 namedata = new Form4();
@@ -156,10 +158,11 @@ namespace ContactTracing
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceLastName.txt");
                 foreach (string dataLname in Lnames)
                 {
-                    MessageBox.Show(dataLname);
+                    //MessageBox.Show(dataLname);
                     file.WriteLine(dataLname);
 
                 }
+                MessageBox.Show("Found: " + Lcounted.ToString() + " instances of: " + grabLName);
                 MessageBox.Show("The info will be saved and can be viewed at ContactTraceLastName.txt");
                 file.Close();
                 Form5 lnamedata = new Form5();
