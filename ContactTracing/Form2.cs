@@ -21,5 +21,18 @@ namespace ContactTracing
         {
 
         }
+
+        private void btnSbDate_Click(object sender, EventArgs e)
+        {
+            //StreamReader reader = new StreamReader(@"C:\Users\liljo\Documents\Forms\ContactTrace.txt");
+
+        }
+
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            
+            MessageBox.Show(reader.ReadToEnd());
+        }
     }
 }

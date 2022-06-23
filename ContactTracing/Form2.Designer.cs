@@ -136,6 +136,7 @@
             this.btnSbDate.TabIndex = 12;
             this.btnSbDate.Text = "Submit";
             this.btnSbDate.UseVisualStyleBackColor = true;
+            this.btnSbDate.Click += new System.EventHandler(this.btnSbDate_Click);
             // 
             // btnSbName
             // 
@@ -158,6 +159,7 @@
             this.btnShowAll.TabIndex = 14;
             this.btnShowAll.Text = "Show";
             this.btnShowAll.UseVisualStyleBackColor = true;
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // Form2
             // 
