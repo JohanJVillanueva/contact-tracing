@@ -16,5 +16,10 @@ namespace ContactTracing
         {
             InitializeComponent();
         }
+
+        private void lblSbDate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
