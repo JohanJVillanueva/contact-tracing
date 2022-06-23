@@ -148,6 +148,7 @@
             this.btnSbName.TabIndex = 13;
             this.btnSbName.Text = "Submit";
             this.btnSbName.UseVisualStyleBackColor = true;
+            this.btnSbName.Click += new System.EventHandler(this.btnSbName_Click);
             // 
             // btnShowAll
             // 

@@ -34,5 +34,24 @@ namespace ContactTracing
             
             MessageBox.Show(reader.ReadToEnd());
         }
+
+        private void btnSbName_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            int i = 0;
+            string grabName = txtSbName.Text;
+            while (!reader.EndOfStream)
+            {
+                string dataname = reader.ReadLine();
+                if (dataname.Contains(grabName))
+                {
+                    //MessageBox.Show(reader.ReadLine());
+                    MessageBox.Show("Yow" + i.ToString());
+                    i++;
+                }
+                   
+            }
+
+        }
     }
 }
