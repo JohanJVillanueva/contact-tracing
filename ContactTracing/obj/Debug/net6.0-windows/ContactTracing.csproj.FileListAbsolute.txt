@@ -16,3 +16,4 @@ E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-win
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.pdb
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.genruntimeconfig.cache
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ref\ContactTracing.dll
+E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.Form2.resources

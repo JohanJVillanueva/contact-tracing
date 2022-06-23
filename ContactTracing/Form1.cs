@@ -417,7 +417,8 @@ namespace ContactTracing
             String pws = txtPw.Text;
             if (pws == "LilJohn")
             {
-                MessageBox.Show(pws);
+                Form2 info = new Form2();
+                info.ShowDialog(); // Shows Form2
             }
             else {
                 MessageBox.Show("Wrong Password");
