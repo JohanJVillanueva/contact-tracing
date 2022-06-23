@@ -49,7 +49,6 @@
             this.txtCityProv = new System.Windows.Forms.TextBox();
             this.txtPhoneN = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.dtP1 = new System.Windows.Forms.DateTimePicker();
             this.txtHours = new System.Windows.Forms.TextBox();
@@ -74,6 +73,8 @@
             this.clbox = new System.Windows.Forms.CheckedListBox();
             this.lblSymptoms = new System.Windows.Forms.Label();
             this.lblSymptoms2 = new System.Windows.Forms.Label();
+            this.btnAdmin = new System.Windows.Forms.Button();
+            this.txtPw = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -316,15 +317,6 @@
             this.txtEmail.PlaceholderText = "example@email.com";
             this.txtEmail.Size = new System.Drawing.Size(291, 40);
             this.txtEmail.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(590, 594);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // lblTime
             // 
@@ -595,12 +587,32 @@
             this.lblSymptoms2.TabIndex = 38;
             this.lblSymptoms2.Text = "Leave unchecked if none";
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Location = new System.Drawing.Point(483, 130);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(75, 23);
+            this.btnAdmin.TabIndex = 39;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            // 
+            // txtPw
+            // 
+            this.txtPw.Location = new System.Drawing.Point(377, 130);
+            this.txtPw.Name = "txtPw";
+            this.txtPw.PasswordChar = '*';
+            this.txtPw.PlaceholderText = "Password";
+            this.txtPw.Size = new System.Drawing.Size(100, 23);
+            this.txtPw.TabIndex = 40;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(592, 952);
+            this.ClientSize = new System.Drawing.Size(591, 952);
+            this.Controls.Add(this.txtPw);
+            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.lblSymptoms2);
             this.Controls.Add(this.lblSymptoms);
             this.Controls.Add(this.clbox);
@@ -618,7 +630,6 @@
             this.Controls.Add(this.txtHours);
             this.Controls.Add(this.dtP1);
             this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtPhoneN);
             this.Controls.Add(this.txtCityProv);
@@ -677,7 +688,6 @@
         private TextBox txtCityProv;
         private TextBox txtPhoneN;
         private TextBox txtEmail;
-        private Button button1;
         private Label lblTime;
         private DateTimePicker dtP1;
         private TextBox txtHours;
@@ -702,5 +712,7 @@
         private CheckedListBox clbox;
         private Label lblSymptoms;
         private Label lblSymptoms2;
+        private Button btnAdmin;
+        private TextBox txtPw;
     }
 }
