@@ -411,5 +411,18 @@ namespace ContactTracing
         {
 
         }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            String pws = txtPw.Text;
+            if (pws == "LilJohn")
+            {
+                MessageBox.Show(pws);
+            }
+            else {
+                MessageBox.Show("Wrong Password");
+            }
+            
+        }
     }
 }
