@@ -15,6 +15,7 @@ namespace ContactTracing
         public Form2()
         {
             InitializeComponent();
+            
         }
 
         private void lblSbDate_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace ContactTracing
                 if (datadate.Contains(InfoDate))
                 {
                     countDate++;
-                    MessageBox.Show("Found" + countDate.ToString());
+                    MessageBox.Show("Found: " + countDate.ToString());
                     dates.Add(datadate);
                 }
 
@@ -47,18 +48,25 @@ namespace ContactTracing
             if (countDate == 0)
             {
                 MessageBox.Show("No contact tracing information found on that date");
+                reader.Close();
             }
             else
             {
+                reader.Close();
+                StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt", true);
                 foreach (string datadate in dates)
                 {
                     MessageBox.Show(datadate);
+                    file.WriteLine(datadate);
                 }
+                MessageBox.Show("The info will be saved and can be viewd at ContactTraceDate.txt");
+                file.Close();
+                //Form3 data = new Form3();
+                //data.ShowDialog(); // Shows Form3
 
-                Form3 data = new Form3();
-                data.ShowDialog(); // Shows Form2
+
             }
-
+            
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)
@@ -101,8 +109,8 @@ namespace ContactTracing
                     MessageBox.Show(dataname);
                 }
             }
-            
-            
+            reader.Close();
+
 
         }
 
@@ -137,8 +145,10 @@ namespace ContactTracing
                 foreach (string dataLname in Lnames)
                 {
                     MessageBox.Show(dataLname);
+                    
                 }
             }
+            reader.Close();
         }
     }
 }
