@@ -18,3 +18,7 @@ Name: Asd,A,asd,Address123,asdasd,dasdasd,Contact:123123,asdasd,Date:6/23/2022,0
 Name: Asd,A,asd,Address123,asd,asd,Contact:1123123,asdasd,Date:6/23/2022,07:19 PM,Temperature: 364,Male,Vax InfoVaxxed and Boosted,19,
 Name: A,A,a,Address1,a,a,Contact:1,a,Date:6/23/2022,7:1 PM,Temperature: 12,Male,Vax InfoVaxxed and Boosted,9,
 Name: Aa,AA,aa,Address11,aa,aa,Contact:11,aa,Date:6/23/2022,71:11 PM,Temperature: 12,Male,Vax InfoVaxxed and Boosted,9,
+Name: A,A,a,Address1,a,a,Contact:1,a,Date:6/23/2022,7:25 PM,Temperature: 1,Male,Vax InfoVaxxed and Boosted,2,
+Name: A,A,a,Address1,a,a,Contact:1,a,Date:6/23/2022,7:25 PM,Temperature: 1,Male,Vax InfoVaxxed and Boosted,2,
+Name: A,A,a,Address1,a,a,Contact:1,1,Date:6/23/2022,7:26 PM,Temperature: 37,Male,Vax InfoVaxxed and Boosted,19,Symptoms: -Runny Nose-Loss of smell or taste
+Name: A,A,a,Address1,a,a,Contact:1,1,Date:6/23/2022,7:26 PM,Temperature: 37,Male,Vax InfoVaxxed and Boosted,19,Symptoms: No symptoms
