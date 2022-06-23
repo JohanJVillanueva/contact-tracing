@@ -383,7 +383,7 @@ namespace ContactTracing
 
                 //StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
-                file.WriteLine("Name: " +Fname + "," + MI + "," + Lname + "," + "Address" + StreetNum + "," + StreetName + "," + CityProv + "," + "Contact:" + PhoneNum + "," + Email + "," + "Date:" + theDate + "," + Hours + ":" + Minute + " " + Meridian + "," + "Temperature: " + Temperature + "," + Sex + "," + "Vax Info" + vax + "," + Age + "," + "Symptoms: " + Symptoms);
+                file.WriteLine("Name: " +Fname + "  ,  " + MI + "  ,  " + Lname + "  ,  " + "Address" + StreetNum + "  ,  " + StreetName + "  ,  " + CityProv + "  ,  " + "Contact:" + PhoneNum + "  ,  " + Email + "  ,  " + "Date:" + theDate + "  ,  " + Hours + ":" + Minute + " " + Meridian + "  ,  " + "Temperature: " + Temperature + "  ,  " + Sex + "  ,  " + "Vax Info" + vax + "  ,  " + Age + "  ,  " + "Symptoms: " + Symptoms);
                 file.Close();
 
                 MessageBox.Show("Information Submitted on ContactTrace.txt");
