@@ -381,7 +381,7 @@ namespace ContactTracing
             {
                 MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname +Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate +Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: " + Symptoms);
 
-                //StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
+                
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
                 file.WriteLine("Name: " +Fname + "  ,  " + MI + "  ,  " + Lname + "  ,  " + "Address: " + StreetNum + "  ,  " + StreetName + "  ,  " + CityProv + "  ,  " + "Contact:" + PhoneNum + "  ,  " + Email + "  ,  " + "Date:" + theDate + "  ,  " + Hours + ":" + Minute + " " + Meridian + "  ,  " + "Temperature: " + Temperature + "  ,  " + Sex + "  ,  " + "Vax Info" + vax + "  ,  " + Age + "  ,  " + "Symptoms: " + Symptoms);
                 file.Close();

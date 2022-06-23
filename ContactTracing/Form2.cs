@@ -30,8 +30,7 @@ namespace ContactTracing
 
             List<string> dates = new List<string>();
 
-            //int datecount = 0;
-            //Date:6/23/2022 9 and 10
+
             string InfoDate = dtP2.Value.ToShortDateString();
             int countDate = 0;
             while (!reader.EndOfStream)
@@ -40,7 +39,7 @@ namespace ContactTracing
                 if (datadate.Contains(InfoDate))
                 {
                     countDate++;
-                    //MessageBox.Show("Found: " + countDate.ToString());
+
                     dates.Add(datadate);
                 }
 
@@ -56,7 +55,7 @@ namespace ContactTracing
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt");
                 foreach (string datadate in dates)
                 {
-                    //MessageBox.Show(datadate);
+    
                     file.WriteLine(datadate);
                 }
                 MessageBox.Show("Found: " + countDate.ToString() + " forms on said date");
@@ -72,9 +71,7 @@ namespace ContactTracing
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
-            //StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
-            //MessageBox.Show(reader.ReadToEnd());
-            //reader.Close();
+
             Form6 all = new Form6();
             all.ShowDialog(); // Shows Form6
 
@@ -94,9 +91,7 @@ namespace ContactTracing
                 string dataname = reader.ReadLine();
                 if (dataname.Contains(grabName))
                 {
-                    //MessageBox.Show(reader.ReadLine());
                     counted++;
-                    //MessageBox.Show("Found: " + counted.ToString());
                     names.Add(dataname);
                     
 
@@ -115,7 +110,7 @@ namespace ContactTracing
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceFirstName.txt");
                 foreach (string dataname in names)
                 {
-                    //MessageBox.Show(dataname);
+                    
                     file.WriteLine(dataname);
                 }
                 MessageBox.Show("Found: " + counted.ToString() + " instances of: " + grabName);
@@ -142,9 +137,7 @@ namespace ContactTracing
                 string dataLname = reader.ReadLine();
                 if (dataLname.Contains(grabLName))
                 {
-                    //MessageBox.Show(reader.ReadLine());
                     Lcounted++;
-                    //MessageBox.Show("Found: " + Lcounted.ToString());
                     Lnames.Add(dataLname);
 
                 }
@@ -162,7 +155,7 @@ namespace ContactTracing
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceLastName.txt");
                 foreach (string dataLname in Lnames)
                 {
-                    //MessageBox.Show(dataLname);
+
                     file.WriteLine(dataLname);
 
                 }
@@ -170,7 +163,7 @@ namespace ContactTracing
                 MessageBox.Show("The info will be saved and can be viewed at ContactTraceLastName.txt");
                 file.Close();
                 Form5 lnamedata = new Form5();
-                lnamedata.ShowDialog(); // Shows Form3
+                lnamedata.ShowDialog(); 
             }
             reader.Close();
         }

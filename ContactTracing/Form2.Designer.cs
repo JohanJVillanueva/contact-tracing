@@ -86,12 +86,12 @@
             this.lblCaption.AutoSize = true;
             this.lblCaption.Font = new System.Drawing.Font("Futura Maxi CG Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblCaption.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblCaption.Location = new System.Drawing.Point(86, 45);
+            this.lblCaption.Location = new System.Drawing.Point(55, 45);
             this.lblCaption.Name = "lblCaption";
-            this.lblCaption.Size = new System.Drawing.Size(411, 44);
+            this.lblCaption.Size = new System.Drawing.Size(475, 44);
             this.lblCaption.TabIndex = 4;
-            this.lblCaption.Text = "Access the contact tracing information of \r\ncutomers by their name, date or tempe" +
-    "rature";
+            this.lblCaption.Text = "Access the contact tracing information of \r\ncustomers by their name, date or any " +
+    "info you need.\r\n";
             this.lblCaption.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblNameOfCT
