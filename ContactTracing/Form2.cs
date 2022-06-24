@@ -25,14 +25,16 @@ namespace ContactTracing
 
         private void btnSbDate_Click(object sender, EventArgs e)
         {
-            
+            //Filters info by Date
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
-
+            //Makes a list of the strings corresponding to the right date
             List<string> dates = new List<string>();
 
-
+            //grabs date from dtp2
             string InfoDate = dtP2.Value.ToShortDateString();
             int countDate = 0;
+
+            //loop through the file line by line to see if there is any instances of the query
             while (!reader.EndOfStream)
             {
                 string datadate = reader.ReadLine();
@@ -51,6 +53,7 @@ namespace ContactTracing
             }
             else
             {
+                //writes a separate txt file to be able to isolate the query 
                 reader.Close();
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceDate.txt");
                 foreach (string datadate in dates)
@@ -71,7 +74,7 @@ namespace ContactTracing
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
-
+            //opens form6 to show all data
             Form6 all = new Form6();
             all.ShowDialog(); // Shows Form6
 
@@ -80,12 +83,15 @@ namespace ContactTracing
 
         private void btnSbName_Click(object sender, EventArgs e)
         {
+            //Filters info by First Name
+            //Makes a list of the strings corresponding to the right name
             List<string> names = new List<string>();
 
 
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
             int counted = 0;
             string grabName = txtSbName.Text;
+            //loop through the file line by line to see if there is any instances of the query
             while (!reader.EndOfStream)
             {
                 string dataname = reader.ReadLine();
@@ -107,6 +113,7 @@ namespace ContactTracing
             else
             {
                 reader.Close();
+                //writes a separate txt file to be able to isolate the query 
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceFirstName.txt");
                 foreach (string dataname in names)
                 {
@@ -126,12 +133,15 @@ namespace ContactTracing
 
         private void btnSbLName_Click(object sender, EventArgs e)
         {
+            //Filters info by Lname
+            //Makes a list of the strings corresponding to the right lname
             List<string> Lnames = new List<string>();
 
 
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
             int Lcounted = 0;
             string grabLName = txtSbLName.Text;
+            //loop through the file line by line to see if there is any instances of the query
             while (!reader.EndOfStream)
             {
                 string dataLname = reader.ReadLine();
@@ -152,6 +162,7 @@ namespace ContactTracing
             else
             {
                 reader.Close();
+                //writes a separate txt file to be able to isolate the query 
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceLastName.txt");
                 foreach (string dataLname in Lnames)
                 {
@@ -169,14 +180,17 @@ namespace ContactTracing
         }
 
         private void btnSearchAll_Click(object sender, EventArgs e)
-        {                     
-
+        {
+            //Filters info by Date AND Query
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
+            //Makes a list of the strings corresponding to the right date / info
             List<string> all = new List<string>();
             
             string Query = txtSearchAll.Text;
+            //grabs date from dtp3
             string AllInfoDate = dtP3.Value.ToShortDateString();
             int counted = 0;
+            //loop through the file line by line to see if there is any instances of the query
             while (!reader.EndOfStream)
             {
                 string Allinfo = reader.ReadLine();
@@ -199,6 +213,7 @@ namespace ContactTracing
             else
             {
                 reader.Close();
+                //writes a separate txt file to be able to isolate the query 
                 StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTraceSpecific.txt");
                 foreach (string info in all)
                 {
