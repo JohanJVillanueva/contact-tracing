@@ -15,6 +15,7 @@ namespace ContactTracing
         public Form6()
         {
             InitializeComponent();
+            //Reads the notepad file and displays it in the labelinfo variable
             StreamReader reader = new StreamReader(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt");
 
             while (!reader.EndOfStream)
