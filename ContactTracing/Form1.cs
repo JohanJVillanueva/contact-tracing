@@ -862,11 +862,30 @@ namespace ContactTracing
                     MessageBox.Show(result.ToString());
 
                     timer1.Stop();
+
+                    string InfoObtained = result.ToString();
+                    StringBuilder sb = new StringBuilder(InfoObtained);
+                    if (InfoObtained.Contains("Date"))
+                    {
+                        int start = InfoObtained.IndexOf("Date");
+                        int end = InfoObtained.IndexOf("Temperature");
+                        int width = end - start;
+                        sb.Insert(start, "Hello");
+                        Console.WriteLine(start.ToString());
+                        sb.Remove(start, width);
+                        InfoObtained = sb.ToString();
+                        Console.WriteLine(InfoObtained);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Wrong input");
+                    }
+
                     //if (captureDevice.IsRunning)
                     //{
                     //    captureDevice.Stop();
                     //}
-                        
+
                 }
             }
         }

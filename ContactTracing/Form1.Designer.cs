@@ -686,11 +686,11 @@
             this.btnScan.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnScan.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnScan.ForeColor = System.Drawing.Color.White;
-            this.btnScan.Location = new System.Drawing.Point(823, 464);
+            this.btnScan.Location = new System.Drawing.Point(773, 464);
             this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(154, 53);
+            this.btnScan.Size = new System.Drawing.Size(269, 53);
             this.btnScan.TabIndex = 47;
-            this.btnScan.Text = "Scan";
+            this.btnScan.Text = "Scan and Submit";
             this.btnScan.UseVisualStyleBackColor = false;
             this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
