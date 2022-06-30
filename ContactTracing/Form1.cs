@@ -1,3 +1,5 @@
+using QRCoder;
+
 namespace ContactTracing
 {
     public partial class Form1 : Form
@@ -789,7 +791,17 @@ namespace ContactTracing
             if (correct == 13)
             {
                 //Show information in a messagebox, for the user to see 
-                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname + Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: " + Symptoms);
+                MessageBox.Show("This information will be generated to the QR Code: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname + Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: " + Symptoms);
+
+                QRCodeGenerator qr = new QRCodeGenerator();
+                string info = "Name: " + Fname + "  ,  " + MI + "  ,  " + Lname + "  ,  " + "Address: " + StreetNum + "  ,  " + StreetName + "  ,  " + CityProv + "  ,  " + "Contact:" + PhoneNum + "  ,  " + Email + "  ,  " + "Date:" + theDate + "  ,  " + Hours + ":" + Minute + " " + Meridian + "  ,  " + "Temperature: " + Temperature + "  ,  " + Sex + "  ,  " + "Vax Info" + vax + "  ,  " + Age + "  ,  " + "Symptoms: " + Symptoms;
+
+                QRCodeData data = qr.CreateQrCode(info, QRCodeGenerator.ECCLevel.Q);
+                QRCode code = new QRCode(data);
+                pctQR.Image = code.GetGraphic(5);
+
             }
+
+        }
     }
 }
