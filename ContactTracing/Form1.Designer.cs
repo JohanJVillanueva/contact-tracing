@@ -735,6 +735,7 @@
             this.lblQRInfo.Text = "Using this QR Code, you can bypass \r\nmanally typing the information. \r\nJust click" +
     " the Scan and Submit \r\nbutton on top to input \r\nyour information";
             this.lblQRInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblQRInfo.Click += new System.EventHandler(this.lblQRInfo_Click);
             // 
             // lblCamera
             // 

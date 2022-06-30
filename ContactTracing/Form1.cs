@@ -16,10 +16,12 @@ namespace ContactTracing
         public Form1()
         {
             InitializeComponent();
+            lblQRInfo.Visible = false;
         }
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
+        
 
         private void lblFName_Click(object sender, EventArgs e)
         {
@@ -821,6 +823,7 @@ namespace ContactTracing
                 QRCodeData data = qr.CreateQrCode(info, QRCodeGenerator.ECCLevel.Q);
                 QRCode code = new QRCode(data);
                 pctQR.Image = code.GetGraphic(5);
+                lblQRInfo.Visible = true;
 
             }
 
@@ -847,10 +850,10 @@ namespace ContactTracing
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
         {
             //Stops the camera when Form1 is closed
-            if(captureDevice.IsRunning)
-                captureDevice.Stop();
-            Application.Exit();
-            Environment.Exit(0);
+            //if(captureDevice.IsRunning)
+            //    captureDevice.Stop();
+            //Application.Exit();
+            //Environment.Exit(0);
         }
 
 
@@ -905,6 +908,8 @@ namespace ContactTracing
                         //Confirm to the user that the info was copied and the application will restart by itself
                         MessageBox.Show("Information Submitted on ContactTrace.txt");
                         MessageBox.Show("Application will now restart for a new form to be inputted. Thank you for using! Stay safe!");
+
+
                         Application.Restart();
                         Environment.Exit(0);
 
@@ -930,11 +935,14 @@ namespace ContactTracing
 
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            //Stops the camera when Form1 is closed
-            //if (captureDevice.IsRunning)
-            //    captureDevice.Stop();
-            Application.Exit();
-            Environment.Exit(0);
+          
+           Application.Exit();
+           Environment.Exit(0);
+        }
+
+        private void lblQRInfo_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
