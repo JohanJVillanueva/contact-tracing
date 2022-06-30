@@ -439,7 +439,12 @@ namespace ContactTracing
             foreach (FilterInfo filterinfo in filterInfoCollection)
                 cmbCamera.Items.Add(filterinfo.Name);
             cmbCamera.SelectedIndex = 0;
-            
+
+            //captureDevice = new VideoCaptureDevice(filterInfoCollection[cmbCamera.SelectedIndex].MonikerString);
+            //captureDevice.NewFrame += FinalFrame_NewFrame;
+            //captureDevice.Start();
+            //timer1.Start();
+
         }
 
         private void btnQRGenerate_Click(object sender, EventArgs e)
@@ -853,12 +858,14 @@ namespace ContactTracing
                 Result result = barcodeReader.Decode((Bitmap)pctScanQR.Image);
                 if(result != null)
                 {
+                    MessageBox.Show("You have inputted this information: ");
                     MessageBox.Show(result.ToString());
+
                     timer1.Stop();
-                    if (captureDevice.IsRunning)
-                    {
-                        captureDevice.Stop();
-                    }
+                    //if (captureDevice.IsRunning)
+                    //{
+                    //    captureDevice.Stop();
+                    //}
                         
                 }
             }
