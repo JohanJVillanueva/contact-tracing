@@ -75,9 +75,16 @@
             this.lblSymptoms2 = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.txtPw = new System.Windows.Forms.TextBox();
+            this.pctForm1QRCover = new System.Windows.Forms.PictureBox();
+            this.btnQRGenerate = new System.Windows.Forms.Button();
+            this.lblGenerate = new System.Windows.Forms.Label();
+            this.lblScan = new System.Windows.Forms.Label();
+            this.pctQR = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctForm1QRCover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctQR)).BeginInit();
             this.SuspendLayout();
             // 
             // pctBg
@@ -386,7 +393,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSubmit.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(399, 866);
+            this.btnSubmit.Location = new System.Drawing.Point(964, 842);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(154, 70);
             this.btnSubmit.TabIndex = 36;
@@ -606,12 +613,68 @@
             this.txtPw.Size = new System.Drawing.Size(100, 23);
             this.txtPw.TabIndex = 40;
             // 
+            // pctForm1QRCover
+            // 
+            this.pctForm1QRCover.Image = ((System.Drawing.Image)(resources.GetObject("pctForm1QRCover.Image")));
+            this.pctForm1QRCover.Location = new System.Drawing.Point(609, 12);
+            this.pctForm1QRCover.Name = "pctForm1QRCover";
+            this.pctForm1QRCover.Size = new System.Drawing.Size(614, 929);
+            this.pctForm1QRCover.TabIndex = 41;
+            this.pctForm1QRCover.TabStop = false;
+            // 
+            // btnQRGenerate
+            // 
+            this.btnQRGenerate.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnQRGenerate.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnQRGenerate.ForeColor = System.Drawing.Color.White;
+            this.btnQRGenerate.Location = new System.Drawing.Point(964, 783);
+            this.btnQRGenerate.Name = "btnQRGenerate";
+            this.btnQRGenerate.Size = new System.Drawing.Size(154, 53);
+            this.btnQRGenerate.TabIndex = 42;
+            this.btnQRGenerate.Text = "Generate";
+            this.btnQRGenerate.UseVisualStyleBackColor = false;
+            this.btnQRGenerate.Click += new System.EventHandler(this.btnQRGenerate_Click);
+            // 
+            // lblGenerate
+            // 
+            this.lblGenerate.AutoSize = true;
+            this.lblGenerate.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblGenerate.ForeColor = System.Drawing.Color.Brown;
+            this.lblGenerate.Location = new System.Drawing.Point(622, 615);
+            this.lblGenerate.Name = "lblGenerate";
+            this.lblGenerate.Size = new System.Drawing.Size(420, 23);
+            this.lblGenerate.TabIndex = 43;
+            this.lblGenerate.Text = "Generate QR Code and/or Submit Information:\r\n";
+            // 
+            // lblScan
+            // 
+            this.lblScan.AutoSize = true;
+            this.lblScan.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblScan.ForeColor = System.Drawing.Color.Brown;
+            this.lblScan.Location = new System.Drawing.Point(622, 46);
+            this.lblScan.Name = "lblScan";
+            this.lblScan.Size = new System.Drawing.Size(136, 23);
+            this.lblScan.TabIndex = 44;
+            this.lblScan.Text = "Scan QR Code:";
+            // 
+            // pctQR
+            // 
+            this.pctQR.Location = new System.Drawing.Point(649, 655);
+            this.pctQR.Name = "pctQR";
+            this.pctQR.Size = new System.Drawing.Size(272, 257);
+            this.pctQR.TabIndex = 45;
+            this.pctQR.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(591, 952);
+            this.ClientSize = new System.Drawing.Size(1201, 952);
+            this.Controls.Add(this.pctQR);
+            this.Controls.Add(this.lblScan);
+            this.Controls.Add(this.lblGenerate);
+            this.Controls.Add(this.btnQRGenerate);
             this.Controls.Add(this.txtPw);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.lblSymptoms2);
@@ -651,17 +714,21 @@
             this.Controls.Add(this.lblContact);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pctBg);
+            this.Controls.Add(this.pctForm1QRCover);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LilJohn Contact Tracing Form";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctForm1QRCover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctQR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,5 +782,10 @@
         private Label lblSymptoms2;
         private Button btnAdmin;
         private TextBox txtPw;
+        private PictureBox pctForm1QRCover;
+        private Button btnQRGenerate;
+        private Label lblGenerate;
+        private Label lblScan;
+        private PictureBox pctQR;
     }
 }

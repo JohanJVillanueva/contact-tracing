@@ -418,5 +418,378 @@ namespace ContactTracing
             }
             
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQRGenerate_Click(object sender, EventArgs e)
+        {
+            //Error Correction
+            byte correct = 0;
+            //Name
+            string Fname = txtFName.Text;
+            //Numbers
+            Fname = Fname.Replace("1", "").Replace("2", "").Replace("3", "").Replace("4", "").Replace("5", "").Replace("6", "").Replace("7", "").Replace("8", "").Replace("9", "").Replace("0", "");
+            //Symbols
+            Fname = Fname.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("=", "").Replace("+", "");
+            Fname = Fname.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Fname = Fname.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+
+            string MI = txtMI.Text;
+            //Numbers
+            MI = MI.Replace("1", "").Replace("2", "").Replace("3", "").Replace("4", "").Replace("5", "").Replace("6", "").Replace("7", "").Replace("8", "").Replace("9", "").Replace("0", "");
+            //Symbols
+            MI = MI.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("=", "").Replace("+", "");
+            MI = MI.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            MI = MI.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+
+
+
+            string Lname = txtLName.Text;
+            //Numbers
+            Lname = Lname.Replace("1", "").Replace("2", "").Replace("3", "").Replace("4", "").Replace("5", "").Replace("6", "").Replace("7", "").Replace("8", "").Replace("9", "").Replace("0", "");
+            //Symbols
+            Lname = Lname.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("=", "").Replace("+", "");
+            Lname = Lname.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Lname = Lname.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+
+
+            //Address
+            string StreetNum = txtStNo.Text;
+            //Alphabet
+            StreetNum = StreetNum.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            StreetNum = StreetNum.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            StreetNum = StreetNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
+            string StreetName = txtSTName.Text;
+            StreetName = StreetName.Replace(",", "");
+            string CityProv = txtCityProv.Text;
+
+            //Phone and Email
+            string PhoneNum = txtPhoneN.Text;
+            //Alphabet
+            PhoneNum = PhoneNum.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            PhoneNum = PhoneNum.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            PhoneNum = PhoneNum.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
+            //Symbols
+            PhoneNum = PhoneNum.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            PhoneNum = PhoneNum.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            PhoneNum = PhoneNum.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+            string Email = txtEmail.Text;
+
+            //date
+            string theDate = dtP1.Value.ToShortDateString();
+
+            //Time
+            string Hours = txtHours.Text;
+            //Alphabet
+            Hours = Hours.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Hours = Hours.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Hours = Hours.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
+            //Symbols
+            Hours = Hours.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Hours = Hours.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Hours = Hours.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+
+            string Minute = txtMin.Text;
+            Minute = Minute.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Minute = Minute.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Minute = Minute.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
+            //Symbols
+            Minute = Minute.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Minute = Minute.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Minute = Minute.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+
+
+            string Meridian = txtAMPM.Text;
+            //Alphabet
+            Meridian = Meridian.Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Meridian = Meridian.Replace("j", "").Replace("k", "").Replace("l", "").Replace("n", "").Replace("o", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Meridian = Meridian.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
+            //Symbols
+            Meridian = Meridian.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Meridian = Meridian.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "");
+
+            //Numbers
+            Meridian = Meridian.Replace("1", "").Replace("2", "").Replace("3", "").Replace("4", "").Replace("5", "").Replace("6", "").Replace("7", "").Replace("8", "").Replace("9", "").Replace("0", "");
+
+
+            //Meridian = Meridian.ToUpper();
+            //Check later if PM or AM
+
+            string Temperature = txtTemp.Text;
+            //Alphabet
+            Temperature = Temperature.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Temperature = Temperature.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Temperature = Temperature.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "").Replace(".", "");
+
+            string Sex = "";
+
+            if (txtMale.Checked == true)
+            {
+                Sex = txtMale.Text;
+            }
+            else
+            {
+                Sex = txtFemale.Text;
+            }
+
+            String vax = "";
+            if (rbNoVax.Checked == true)
+            {
+                vax = rbNoVax.Text;
+            }
+            else if (rbOneVax.Checked == true)
+            {
+                vax = rbOneVax.Text;
+            }
+            else if (rbVaB.Checked == true)
+            {
+                vax = rbVaB.Text;
+            }
+
+            string Age = txtAge.Text;
+            Age = Age.Replace("a", "").Replace("b", "").Replace("c", "").Replace("d", "").Replace("e", "").Replace("f", "").Replace("g", "").Replace("h", "").Replace("i", "");
+            Age = Age.Replace("j", "").Replace("k", "").Replace("l", "").Replace("m", "").Replace("n", "").Replace("o", "").Replace("p", "").Replace("q", "").Replace("r", "").Replace("s", "").Replace("t", "");
+            Age = Age.Replace("u", "").Replace("v", "").Replace("w", "").Replace("x", "").Replace("y", "").Replace("z", "");
+
+            //Symbols
+            Age = Age.Replace("%", "").Replace("^", "").Replace("&", "").Replace("*", "").Replace("(", "").Replace(")", "").Replace("_", "").Replace("-", "").Replace("=", "").Replace("+", "");
+            Age = Age.Replace("\\", "").Replace("|", "").Replace("<", "").Replace(">", "").Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "").Replace("[", "").Replace("]", "");
+            Age = Age.Replace("{", "").Replace("}", "").Replace("'", "").Replace("!", "").Replace("@", "").Replace("#", "").Replace("$", "");
+
+            string Symptoms = "";
+
+
+            foreach (var item in clbox.CheckedItems)
+            {
+                Symptoms = Symptoms + "-" + item.ToString();
+            }
+
+            if (Symptoms.Length == 0)
+            {
+                Symptoms = "No symptoms";
+            }
+
+            //MessageBox.Show(Symptoms);
+
+
+
+
+
+
+
+
+            while (correct != 13)
+            {
+                /////////////////
+                //  NAME INFO  //
+                /////////////////
+
+
+                //Input check for First Name
+                if (Fname.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on First Name! Submit again once fixed.");
+                    break;
+
+                }
+                else if (Fname.Length > 0)
+                {
+                    Fname = char.ToUpper(Fname[0]) + Fname.Substring(1);
+                    correct++;
+                }
+
+
+
+                //Input check for Middle Initial
+                if (MI.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Middle Initial! Submit again once fixed.");
+                    break;
+                }
+                else if (MI.Length > 0)
+                {
+                    correct++;
+                }
+
+
+                //Input check for Last Name Initial
+                if (Lname.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Last Name! Submit again once fixed.");
+                    break;
+                }
+                else if (Lname.Length > 0)
+                {
+                    correct++;
+                }
+
+
+
+                ////////////////////
+                //  ADDRESS INFO  //
+                ///////////////////
+
+
+                //Input check for Street Num
+                if (StreetNum.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Street Number! Submit again once fixed.");
+                    break;
+
+                }
+                else if (StreetNum.Length > 0)
+                {
+                    correct++;
+                }
+
+
+
+                //Input check for Street Name
+                if (StreetName.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Street Name! Submit again once fixed.");
+                    break;
+                }
+                else if (StreetName.Length > 0)
+                {
+                    correct++;
+                }
+
+
+                //Input check for City Prov
+                if (CityProv.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on City / Province! Submit again once fixed.");
+                    break;
+                }
+                else if (CityProv.Length > 0)
+                {
+                    correct++;
+                }
+
+                ////////////////////////
+                //  PHONE/EMAIL INFO  //
+                ///////////////////////
+
+
+                //Input check for Phone Num
+                if (PhoneNum.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Phone Num! Submit again once fixed.");
+                    break;
+
+                }
+                else if (PhoneNum.Length > 0)
+                {
+                    correct++;
+                }
+
+
+
+                //Input check for Email
+                if (Email.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on E-mail! Submit again once fixed.");
+                    break;
+                }
+                else if (Email.Length > 0)
+                {
+                    correct++;
+                }
+
+
+                ////////////////////
+                //  TIME IN INFO  //
+                ///////////////////
+
+
+                //Input check for Hours
+                if (Hours.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Hours! Submit again once fixed.");
+                    break;
+
+                }
+                else if (Hours.Length != 0)
+                {
+                    correct++;
+                }
+
+
+
+                //Input check for Minutes
+                if (Minute.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Hours! Submit again once fixed.");
+                    break;
+
+                }
+                else if (Minute.Length != 0)
+                {
+                    correct++;
+                }
+
+
+                //Input check for Meridian
+                if (Meridian.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Meridian! Submit again once fixed.");
+                    break;
+                }
+
+                else if (Meridian.Length > 0)
+                {
+                    correct++;
+                }
+
+                //Input check for Temperature
+                if (Temperature.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Temperature! Submit again once fixed.");
+                    break;
+                }
+
+                else if (Temperature.Length > 0)
+                {
+                    correct++;
+                }
+
+                //Input check for Age
+                if (Age.Length == 0)
+                {
+                    MessageBox.Show("Missing Info on Age! Submit again once fixed.");
+                    break;
+                }
+
+                else if (Age.Length > 0)
+                {
+                    correct++;
+                }
+
+            }
+
+
+
+
+
+            if (correct == 13)
+            {
+                //Show information in a messagebox, for the user to see 
+                MessageBox.Show("This information will be saved: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname + Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: " + Symptoms);
+            }
     }
 }
