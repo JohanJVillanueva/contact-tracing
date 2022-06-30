@@ -86,6 +86,8 @@
             this.cmbCamera = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblQRInfo = new System.Windows.Forms.Label();
+            this.lblCamera = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -634,7 +636,7 @@
             this.btnQRGenerate.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnQRGenerate.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnQRGenerate.ForeColor = System.Drawing.Color.White;
-            this.btnQRGenerate.Location = new System.Drawing.Point(964, 783);
+            this.btnQRGenerate.Location = new System.Drawing.Point(964, 780);
             this.btnQRGenerate.Name = "btnQRGenerate";
             this.btnQRGenerate.Size = new System.Drawing.Size(154, 53);
             this.btnQRGenerate.TabIndex = 42;
@@ -666,7 +668,7 @@
             // 
             // pctQR
             // 
-            this.pctQR.Location = new System.Drawing.Point(649, 655);
+            this.pctQR.Location = new System.Drawing.Point(646, 660);
             this.pctQR.Name = "pctQR";
             this.pctQR.Size = new System.Drawing.Size(272, 257);
             this.pctQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -684,7 +686,7 @@
             // 
             // btnScan
             // 
-            this.btnScan.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnScan.BackColor = System.Drawing.Color.DarkCyan;
             this.btnScan.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnScan.ForeColor = System.Drawing.Color.White;
             this.btnScan.Location = new System.Drawing.Point(825, 464);
@@ -698,7 +700,7 @@
             // cmbCamera
             // 
             this.cmbCamera.FormattingEnabled = true;
-            this.cmbCamera.Location = new System.Drawing.Point(722, 82);
+            this.cmbCamera.Location = new System.Drawing.Point(953, 82);
             this.cmbCamera.Name = "cmbCamera";
             this.cmbCamera.Size = new System.Drawing.Size(121, 23);
             this.cmbCamera.TabIndex = 48;
@@ -721,12 +723,38 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lblQRInfo
+            // 
+            this.lblQRInfo.AutoSize = true;
+            this.lblQRInfo.Font = new System.Drawing.Font("Poetsen One", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblQRInfo.ForeColor = System.Drawing.Color.Brown;
+            this.lblQRInfo.Location = new System.Drawing.Point(924, 675);
+            this.lblQRInfo.Name = "lblQRInfo";
+            this.lblQRInfo.Size = new System.Drawing.Size(226, 80);
+            this.lblQRInfo.TabIndex = 50;
+            this.lblQRInfo.Text = "Using this QR Code, you can bypass \r\nmanally typing the information. \r\nJust click" +
+    " the Scan and Submit \r\nbutton on top to input \r\nyour information";
+            this.lblQRInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblCamera
+            // 
+            this.lblCamera.AutoSize = true;
+            this.lblCamera.Font = new System.Drawing.Font("Poetsen One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCamera.ForeColor = System.Drawing.Color.Brown;
+            this.lblCamera.Location = new System.Drawing.Point(814, 82);
+            this.lblCamera.Name = "lblCamera";
+            this.lblCamera.Size = new System.Drawing.Size(133, 23);
+            this.lblCamera.TabIndex = 51;
+            this.lblCamera.Text = "Camera Used:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1201, 952);
+            this.Controls.Add(this.lblCamera);
+            this.Controls.Add(this.lblQRInfo);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cmbCamera);
             this.Controls.Add(this.btnScan);
@@ -853,5 +881,7 @@
         private ComboBox cmbCamera;
         private System.Windows.Forms.Timer timer1;
         private Button btnClose;
+        private Label lblQRInfo;
+        private Label lblCamera;
     }
 }
