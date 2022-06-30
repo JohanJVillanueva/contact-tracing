@@ -1,4 +1,13 @@
 using QRCoder;
+using AForge.Video;
+using AForge;
+using AForge.Video.DirectShow;
+using ZXing;
+using System.Drawing;
+using System.Text;
+using System.IO;
+using ZXing.Aztec;
+using ZXing.Windows.Compatibility;
 
 namespace ContactTracing
 {
@@ -8,6 +17,9 @@ namespace ContactTracing
         {
             InitializeComponent();
         }
+
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice captureDevice;
 
         private void lblFName_Click(object sender, EventArgs e)
         {
@@ -423,7 +435,11 @@ namespace ContactTracing
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterinfo in filterInfoCollection)
+                cmbCamera.Items.Add(filterinfo.Name);
+            cmbCamera.SelectedIndex = 0;
+            
         }
 
         private void btnQRGenerate_Click(object sender, EventArgs e)
@@ -802,6 +818,50 @@ namespace ContactTracing
 
             }
 
+        }
+
+        private void btnScan_Click(object sender, EventArgs e)
+        {
+            captureDevice = new VideoCaptureDevice(filterInfoCollection[cmbCamera.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += FinalFrame_NewFrame;
+            captureDevice.Start();
+            timer1.Start();
+        }
+
+        private void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            //throw new NotImplementedException();
+            pctScanQR.Image = (Bitmap)eventArgs.Frame.Clone();
+            //pctScanQR.Image = (Bitmap)eventArgs.Frame.Clone();
+            
+
+        }
+
+        private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            if(captureDevice.IsRunning)
+                captureDevice.Stop();
+        }
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(pctScanQR.Image != null)
+            {
+                BarcodeReader barcodeReader = new BarcodeReader();
+                Result result = barcodeReader.Decode((Bitmap)pctScanQR.Image);
+                if(result != null)
+                {
+                    MessageBox.Show(result.ToString());
+                    timer1.Stop();
+                    if (captureDevice.IsRunning)
+                    {
+                        captureDevice.Stop();
+                    }
+                        
+                }
+            }
         }
     }
 }

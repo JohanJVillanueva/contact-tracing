@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pctBg = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
@@ -80,11 +81,16 @@
             this.lblGenerate = new System.Windows.Forms.Label();
             this.lblScan = new System.Windows.Forms.Label();
             this.pctQR = new System.Windows.Forms.PictureBox();
+            this.pctScanQR = new System.Windows.Forms.PictureBox();
+            this.btnScan = new System.Windows.Forms.Button();
+            this.cmbCamera = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctForm1QRCover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctQR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctScanQR)).BeginInit();
             this.SuspendLayout();
             // 
             // pctBg
@@ -666,12 +672,50 @@
             this.pctQR.TabIndex = 45;
             this.pctQR.TabStop = false;
             // 
+            // pctScanQR
+            // 
+            this.pctScanQR.Location = new System.Drawing.Point(722, 111);
+            this.pctScanQR.Name = "pctScanQR";
+            this.pctScanQR.Size = new System.Drawing.Size(352, 347);
+            this.pctScanQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctScanQR.TabIndex = 46;
+            this.pctScanQR.TabStop = false;
+            // 
+            // btnScan
+            // 
+            this.btnScan.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnScan.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnScan.ForeColor = System.Drawing.Color.White;
+            this.btnScan.Location = new System.Drawing.Point(823, 464);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(154, 53);
+            this.btnScan.TabIndex = 47;
+            this.btnScan.Text = "Scan";
+            this.btnScan.UseVisualStyleBackColor = false;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
+            // cmbCamera
+            // 
+            this.cmbCamera.FormattingEnabled = true;
+            this.cmbCamera.Location = new System.Drawing.Point(722, 82);
+            this.cmbCamera.Name = "cmbCamera";
+            this.cmbCamera.Size = new System.Drawing.Size(121, 23);
+            this.cmbCamera.TabIndex = 48;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1201, 952);
+            this.Controls.Add(this.cmbCamera);
+            this.Controls.Add(this.btnScan);
+            this.Controls.Add(this.pctScanQR);
             this.Controls.Add(this.pctQR);
             this.Controls.Add(this.lblScan);
             this.Controls.Add(this.lblGenerate);
@@ -730,6 +774,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctForm1QRCover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctQR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctScanQR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -788,5 +833,9 @@
         private Label lblGenerate;
         private Label lblScan;
         private PictureBox pctQR;
+        private PictureBox pctScanQR;
+        private Button btnScan;
+        private ComboBox cmbCamera;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -24,3 +24,8 @@ E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-win
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.Form7.resources
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\bin\Debug\net6.0-windows\QRCoder.dll
 E:\Programming\ContactTracing\ContactTracing\ContactTracing\obj\Debug\net6.0-windows\ContactTracing.csproj.CopyComplete
+E:\Programming\ContactTracing\ContactTracing\ContactTracing\bin\Debug\net6.0-windows\AForge.dll
+E:\Programming\ContactTracing\ContactTracing\ContactTracing\bin\Debug\net6.0-windows\AForge.Video.dll
+E:\Programming\ContactTracing\ContactTracing\ContactTracing\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
+E:\Programming\ContactTracing\ContactTracing\ContactTracing\bin\Debug\net6.0-windows\zxing.dll
+E:\Programming\ContactTracing\ContactTracing\ContactTracing\bin\Debug\net6.0-windows\ZXing.Windows.Compatibility.dll
