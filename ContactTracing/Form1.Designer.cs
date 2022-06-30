@@ -662,6 +662,7 @@
             this.pctQR.Location = new System.Drawing.Point(649, 655);
             this.pctQR.Name = "pctQR";
             this.pctQR.Size = new System.Drawing.Size(272, 257);
+            this.pctQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctQR.TabIndex = 45;
             this.pctQR.TabStop = false;
             // 

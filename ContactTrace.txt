@@ -10,3 +10,4 @@ Name: Mercy  ,  J.  ,  Santos,  Address: 123  ,  Sampaguita St. Caridad  ,  Cavi
 Name: Ruben  ,  J.  ,  Custodio,  Address: 962  ,  Don P. San Roque  ,  Cavite City  ,  Contact:0905129278  ,  ruben@gmail.com  ,  Date:6/23/2022  ,  08:27 PM  ,  Temperature: 37  ,  Male  ,  Vax InfoVaxxed and Boosted  ,  40  ,  Symptoms: No symptoms
 
 
+Name: Johan  ,  J.  ,  Villanueva  ,  Address: 962  ,  Don  ,  Cavite  ,  Contact:0905423  ,  1@gmail.com  ,  Date:6/30/2022  ,  09:02 AM  ,  Temperature: 36  ,  Male  ,  Vax InfoVaxxed and Boosted  ,  19  ,  Symptoms: No symptoms
