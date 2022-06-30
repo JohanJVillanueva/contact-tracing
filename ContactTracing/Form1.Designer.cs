@@ -85,6 +85,7 @@
             this.btnScan = new System.Windows.Forms.Button();
             this.cmbCamera = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -686,9 +687,9 @@
             this.btnScan.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnScan.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnScan.ForeColor = System.Drawing.Color.White;
-            this.btnScan.Location = new System.Drawing.Point(773, 464);
+            this.btnScan.Location = new System.Drawing.Point(825, 464);
             this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(269, 53);
+            this.btnScan.Size = new System.Drawing.Size(249, 53);
             this.btnScan.TabIndex = 47;
             this.btnScan.Text = "Scan and Submit";
             this.btnScan.UseVisualStyleBackColor = false;
@@ -707,12 +708,26 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnClose.Font = new System.Drawing.Font("Poetsen One", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(722, 464);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(97, 53);
+            this.btnClose.TabIndex = 49;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1201, 952);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cmbCamera);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.pctScanQR);
@@ -837,5 +852,6 @@
         private Button btnScan;
         private ComboBox cmbCamera;
         private System.Windows.Forms.Timer timer1;
+        private Button btnClose;
     }
 }

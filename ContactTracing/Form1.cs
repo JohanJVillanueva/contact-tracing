@@ -893,5 +893,11 @@ namespace ContactTracing
                 }
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+            Environment.Exit(0);
+        }
     }
 }
