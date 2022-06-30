@@ -814,6 +814,7 @@ namespace ContactTracing
                 //Show information in a messagebox, for the user to see 
                 MessageBox.Show("This information will be generated to the QR Code: " + Environment.NewLine + "First Name: " + Fname + Environment.NewLine + "Midle Initial: " + MI + ". " + Environment.NewLine + "Last Name: " + Lname + Environment.NewLine + "Sex: " + Sex + Environment.NewLine + "Age: " + Age + Environment.NewLine + "Street No.: " + StreetNum + Environment.NewLine + "Street Name: " + StreetName + Environment.NewLine + "City/Province: " + CityProv + Environment.NewLine + "Phone Number: " + PhoneNum + Environment.NewLine + "Email: " + Email + Environment.NewLine + "Date: " + theDate + Environment.NewLine + "Time: " + Hours + ":" + Minute + " " + Meridian + Environment.NewLine + "Temperature: " + Temperature + Environment.NewLine + "Vaxxed: " + vax + Environment.NewLine + "Symptoms: " + Symptoms);
 
+                //Generates QR Code based on the information
                 QRCodeGenerator qr = new QRCodeGenerator();
                 string info = "Name: " + Fname + "  ,  " + MI + "  ,  " + Lname + "  ,  " + "Address: " + StreetNum + "  ,  " + StreetName + "  ,  " + CityProv + "  ,  " + "Contact:" + PhoneNum + "  ,  " + Email + "  ,  " + "Date:" + theDate + "  ,  " + Hours + ":" + Minute + " " + Meridian + "  ,  " + "Temperature: " + Temperature + "  ,  " + Sex + "  ,  " + "Vax Info" + vax + "  ,  " + Age + "  ,  " + "Symptoms: " + Symptoms;
 
@@ -827,6 +828,7 @@ namespace ContactTracing
 
         private void btnScan_Click(object sender, EventArgs e)
         {
+            //Initiates and finds the camera needed.
             captureDevice = new VideoCaptureDevice(filterInfoCollection[cmbCamera.SelectedIndex].MonikerString);
             captureDevice.NewFrame += FinalFrame_NewFrame;
             captureDevice.Start();
@@ -835,15 +837,16 @@ namespace ContactTracing
 
         private void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            //throw new NotImplementedException();
+            //Displays the image on the picturebox
             pctScanQR.Image = (Bitmap)eventArgs.Frame.Clone();
-            //pctScanQR.Image = (Bitmap)eventArgs.Frame.Clone();
+
             
 
         }
 
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
         {
+            //Stops the camera when Form1 is closed
             if(captureDevice.IsRunning)
                 captureDevice.Stop();
         }
@@ -858,37 +861,58 @@ namespace ContactTracing
                 Result result = barcodeReader.Decode((Bitmap)pctScanQR.Image);
                 if(result != null)
                 {
-                    MessageBox.Show("You have inputted this information: ");
-                    //MessageBox.Show(result.ToString());
-                    string time = DateTime.Now.ToString("hh:mm tt");
-                    //MessageBox.Show(time);
-
+                    //Stops the timer to read the camera
                     timer1.Stop();
+
+                    MessageBox.Show("You have inputted this information: ");
+                    //Grabs the Current Time
+                    string time = DateTime.Now.ToString("hh:mm tt");
+
+                    
+                    
+                    //Grabs current Date
                     string theDate = dtP1.Value.ToShortDateString();
 
                     string InfoObtained = result.ToString();
                     StringBuilder sb = new StringBuilder(InfoObtained);
+
+                    //For us to check if the QR Code has the right Information
                     if (InfoObtained.Contains("Date"))
                     {
                         int start = InfoObtained.IndexOf("Date");
                         int end = InfoObtained.IndexOf("Temperature");
                         int width = end - start;
-                        //MessageBox.Show(start.ToString());
                         sb.Remove(start, width);
                         string add = "Date: " + theDate + " , " + time + " , ";
                         sb.Insert(start, add);
+                        
+                        //To be inputted to txt file
                         InfoObtained = sb.ToString();
-                        MessageBox.Show(InfoObtained);
+
+                        //To be shown for the user to verify
+                        string InfoShown = InfoObtained;
+                        //InfoShown = InfoShown.Replace(":", "\n");
+                        //InfoShown = InfoShown.Replace(",", "\n");
+                        MessageBox.Show(InfoShown);
+
+                        StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
+                        file.WriteLine(InfoObtained);
+                        file.Close();
+
+                        //Confirm to the user that the info was copied and the application will restart by itself
+                        MessageBox.Show("Information Submitted on ContactTrace.txt");
+                        MessageBox.Show("Application will now restart for a new form to be inputted. Thank you for using! Stay safe!");
+                        Application.Restart();
+                        Environment.Exit(0);
+
                     }
                     else
                     {
+                        //If QRCode does not much up with information needed
                         MessageBox.Show("Wrong input");
                     }
 
-                    //if (captureDevice.IsRunning)
-                    //{
-                    //    captureDevice.Stop();
-                    //}
+
 
                 }
             }
@@ -896,6 +920,7 @@ namespace ContactTracing
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            //Restarts the Application
             Application.Restart();
             Environment.Exit(0);
         }
