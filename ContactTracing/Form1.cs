@@ -873,9 +873,10 @@ namespace ContactTracing
                         int start = InfoObtained.IndexOf("Date");
                         int end = InfoObtained.IndexOf("Temperature");
                         int width = end - start;
-                        MessageBox.Show(start.ToString());
+                        //MessageBox.Show(start.ToString());
                         sb.Remove(start, width);
-                        sb.Insert(start, "Date:" + theDate + "  ,  " + );
+                        string add = "Date: " + theDate + " , " + time + " , ";
+                        sb.Insert(start, add);
                         InfoObtained = sb.ToString();
                         MessageBox.Show(InfoObtained);
                     }
