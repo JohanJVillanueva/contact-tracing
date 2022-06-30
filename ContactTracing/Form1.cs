@@ -860,8 +860,11 @@ namespace ContactTracing
                 {
                     MessageBox.Show("You have inputted this information: ");
                     MessageBox.Show(result.ToString());
+                    string time = DateTime.Now.ToString("hh:mm tt");
+                    MessageBox.Show(time);
 
                     timer1.Stop();
+                    string theDate = dtP1.Value.ToShortDateString();
 
                     string InfoObtained = result.ToString();
                     StringBuilder sb = new StringBuilder(InfoObtained);
@@ -870,15 +873,15 @@ namespace ContactTracing
                         int start = InfoObtained.IndexOf("Date");
                         int end = InfoObtained.IndexOf("Temperature");
                         int width = end - start;
-                        sb.Insert(start, "Hello");
-                        Console.WriteLine(start.ToString());
+                        MessageBox.Show(start.ToString());
                         sb.Remove(start, width);
+                        sb.Insert(start, "Date:" + theDate + "  ,  " + );
                         InfoObtained = sb.ToString();
-                        Console.WriteLine(InfoObtained);
+                        MessageBox.Show(InfoObtained);
                     }
                     else
                     {
-                        Console.WriteLine("Wrong input");
+                        MessageBox.Show("Wrong input");
                     }
 
                     //if (captureDevice.IsRunning)
