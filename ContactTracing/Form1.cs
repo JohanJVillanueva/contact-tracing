@@ -859,9 +859,9 @@ namespace ContactTracing
                 if(result != null)
                 {
                     MessageBox.Show("You have inputted this information: ");
-                    MessageBox.Show(result.ToString());
+                    //MessageBox.Show(result.ToString());
                     string time = DateTime.Now.ToString("hh:mm tt");
-                    MessageBox.Show(time);
+                    //MessageBox.Show(time);
 
                     timer1.Stop();
                     string theDate = dtP1.Value.ToShortDateString();
