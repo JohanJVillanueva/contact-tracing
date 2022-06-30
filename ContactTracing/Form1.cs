@@ -849,6 +849,8 @@ namespace ContactTracing
             //Stops the camera when Form1 is closed
             if(captureDevice.IsRunning)
                 captureDevice.Stop();
+            Application.Exit();
+            Environment.Exit(0);
         }
 
 
@@ -897,6 +899,7 @@ namespace ContactTracing
 
                         StreamWriter file = new StreamWriter(@"E:\Programming\ContactTracing\ContactTracing\ContactTrace.txt", true);
                         file.WriteLine(InfoObtained);
+
                         file.Close();
 
                         //Confirm to the user that the info was copied and the application will restart by itself
@@ -922,6 +925,15 @@ namespace ContactTracing
         {
             //Restarts the Application
             Application.Restart();
+            Environment.Exit(0);
+        }
+
+        private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            //Stops the camera when Form1 is closed
+            //if (captureDevice.IsRunning)
+            //    captureDevice.Stop();
+            Application.Exit();
             Environment.Exit(0);
         }
     }
